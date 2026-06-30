@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incordatore FITP · Quiz di studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">Incordatore<span>FITP</span></div>
+    <div class="tagline">360 domande · sessione 2025</div>
+  </header>
+
+  <!-- SETUP -->
+  <section id="screen-setup" class="screen active">
+    <div class="card">
+      <h1>Imposta il tuo allenamento</h1>
+      <p class="muted">Scegli argomenti, livello di confidenza e numero di domande. Le domande che hai già sbagliato in passato hanno più probabilità di ricomparire.</p>
+
+      <fieldset id="topics-fieldset">
+        <legend>Argomenti</legend>
+        <div id="topics-list"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Confidenza risposta</legend>
+        <div class="choices" id="confidence-choices">
+          <label><input type="radio" name="confidence" value="all" checked> Tutte</label>
+          <label><input type="radio" name="confidence" value="Media"> Solo da rivedere (Media)</label>
+          <label><input type="radio" name="confidence" value="Alta"> Solo consolidate (Alta)</label>
+        </div>
+      </fieldset>
+
+      <div class="row">
+        <div class="field">
+          <label for="num-questions">N° domande</label>
+          <input type="number" id="num-questions" min="5" max="360" value="20" step="5">
+        </div>
+        <div class="field">
+          <label for="timed-toggle">Modalità</label>
+          <div class="choices">
+            <label><input type="radio" name="timed" value="no" checked> Libera</label>
+            <label><input type="radio" name="timed" value="yes"> A tempo</label>
+          </div>
+        </div>
+        <div class="field" id="time-limit-field" style="display:none;">
+          <label for="time-limit">Minuti</label>
+          <input type="number" id="time-limit" min="1" max="180" value="30" step="1">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="ghost" id="btn-reset-stats" type="button">Azzera statistiche salvate</button>
+        <button id="btn-start" type="button">Inizia quiz</button>
+      </div>
+    </div>
+
+    <div class="card" id="stats-card" style="display:none;">
+      <h2>Le tue statistiche</h2>
+      <div id="stats-content"></div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen">
+    <div class="card">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="quiz-meta">
+        <span id="progress-label">Domanda 1 / 20</span>
+        <span class="timer" id="timer-display"></span>
+      </div>
+
+      <span class="topic-tag" id="q-topic"></span>
+      <p class="question-text" id="q-text"></p>
+
+      <div class="options" id="q-options"></div>
+
+      <div id="q-feedback"></div>
+
+      <div class="actions">
+        <button class="ghost" id="btn-quit" type="button">Interrompi</button>
+        <button id="btn-confirm" type="button" disabled>Conferma risposta</button>
+        <button id="btn-next" type="button" style="display:none;">Prossima domanda</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="screen-results" class="screen">
+    <div class="card">
+      <h1>Risultato</h1>
+      <div class="score-big" id="score-big">0/0</div>
+      <p class="score-sub" id="score-sub"></p>
+
+      <h2>Spaccato per argomento</h2>
+      <div id="breakdown"></div>
+    </div>
+
+    <div class="card" id="wrong-card" style="display:none;">
+      <h2>Domande da rivedere</h2>
+      <div class="wrong-list" id="wrong-list"></div>
+    </div>
+
+    <div class="actions">
+      <button class="ghost" id="btn-restart" type="button">Torna al setup</button>
+      <button class="clay" id="btn-retry-wrong" type="button" style="display:none;">Rifai solo gli errori</button>
+    </div>
+  </section>
+
+  <footer>STARVIS · Strumento di studio non ufficiale per l'esame incordatore FITP</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
