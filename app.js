@@ -110,6 +110,13 @@
     cloudPushTimer = setTimeout(() => { cloudPush(code, true); }, 1500);
   }
 
+  // Aperto in locale (python http.server) la function /api non esiste:
+  // il server risponde 501/404/405 invece di eseguire il codice serverless.
+  function isApiUnavailable(status){
+    return status === 501 || status === 404 || status === 405;
+  }
+  const OFFLINE_MSG = "ℹ️ Sync disponibile solo online, sul sito pubblicato. In locale i progressi restano su questo browser.";
+
   function cloudPush(code, silent){
     if(!isValidCode(code)){ setSyncStatus("Codice non valido.", "ko"); return Promise.resolve(false); }
     if(!silent) setSyncStatus("Salvataggio sul cloud…");
@@ -118,12 +125,13 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ code, data: stats })
     }).then(r => {
+      if(isApiUnavailable(r.status)){ if(!silent) setSyncStatus(OFFLINE_MSG, ""); return false; }
       if(!r.ok) throw new Error("HTTP " + r.status);
       if(!silent) setSyncStatus("✅ Progressi salvati sul cloud.", "ok");
       return true;
     }).catch(err => {
-      console.error(err);
-      setSyncStatus("⚠️ Errore nel salvataggio cloud.", "ko");
+      // In locale la fetch fallisce comunque: non spammare la console.
+      if(!silent) setSyncStatus("⚠️ Errore nel salvataggio cloud.", "ko");
       return false;
     });
   }
@@ -132,8 +140,13 @@
     if(!isValidCode(code)){ setSyncStatus("Codice non valido. Usa lettere/numeri e trattini, es. tennis-corda-4821.", "ko"); return; }
     setSyncStatus("Caricamento dal cloud…");
     fetch(API_URL + "?code=" + encodeURIComponent(code))
-      .then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(r => {
+        if(isApiUnavailable(r.status)){ setSyncStatus(OFFLINE_MSG, ""); return null; }
+        if(!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
       .then(res => {
+        if(res === null) return;
         if(!res.data){
           setSyncStatus("Nessun progresso trovato per questo codice. Verrà creato al primo salvataggio.", "");
           return;
@@ -145,7 +158,6 @@
         cloudPush(code, true);
       })
       .catch(err => {
-        console.error(err);
         setSyncStatus("⚠️ Errore nel caricamento dal cloud.", "ko");
       });
   }

@@ -207,6 +207,19 @@ button:hover{ background: var(--court-dark); }
 button:active{ transform: scale(.97); }
 button.ghost{ background: transparent; color: var(--court); }
 button.ghost:hover{ background: var(--paper-dim); }
+
+/* Ghost buttons che vivono direttamente sullo sfondo pagina (fuori dalle card):
+   sfondo solido per staccare dall'immagine/verde di sfondo. */
+#screen-results > .actions button.ghost{
+  background: var(--white);
+  color: var(--court-dark);
+  border-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+}
+#screen-results > .actions button.ghost:hover{
+  background: var(--paper-dim);
+  border-color: var(--paper-dim);
+}
 button.clay{ border-color: var(--clay); background: var(--clay); }
 button.clay:hover{ background: var(--clay-dark); }
 button:disabled{ opacity:.45; cursor:not-allowed; }
