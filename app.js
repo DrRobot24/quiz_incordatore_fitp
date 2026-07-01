@@ -168,6 +168,41 @@
       });
   }
 
+  // Salvataggio esplicito "alla Mario": localStorage subito + push cloud
+  // immediato (bypassa il debounce) + feedback visibile sul bottone.
+  function saveProgressExplicit(){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
+    const btn = $("#btn-save");
+    const code = getSyncCode();
+
+    flashSaveButton(btn, "💾 Salvato!", "saved");
+
+    if(isValidCode(code)){
+      clearTimeout(cloudPushTimer);
+      cloudPush(code, true).then(ok => {
+        if(ok) flashSaveButton(btn, "☁️ Salvato nel cloud!", "saved");
+        else flashSaveButton(btn, "💾 Salvato in locale", "");
+      });
+    } else {
+      flashSaveButton(btn, "💾 Salvato su questo dispositivo", "");
+    }
+  }
+
+  function flashSaveButton(btn, text, cls){
+    if(!btn) return;
+    if(!btn.dataset.label) btn.dataset.label = btn.textContent;
+    btn.classList.remove("saved");
+    // reflow per riavviare l'animazione anche a click ravvicinati
+    void btn.offsetWidth;
+    btn.textContent = text;
+    if(cls) btn.classList.add(cls);
+    clearTimeout(btn._flashTimer);
+    btn._flashTimer = setTimeout(() => {
+      btn.textContent = btn.dataset.label;
+      btn.classList.remove("saved");
+    }, 1800);
+  }
+
   // Riga di stato discreta nel setup: mostra se c'è un codice sync attivo.
   function renderSyncBadge(){
     const el = $("#sync-badge");
@@ -255,6 +290,15 @@
         renderStats();
       }
     });
+    const exitBtn = $("#btn-exit");
+    if(exitBtn) exitBtn.addEventListener("click", () => {
+      if(confirm("Uscire e tornare alla schermata iniziale? Il quiz in corso andrà perso (le risposte già date restano salvate).")){
+        stopTimer();
+        showScreen("welcome");
+      }
+    });
+    const saveBtn = $("#btn-save");
+    if(saveBtn) saveBtn.addEventListener("click", () => saveProgressExplicit());
     $("#btn-restart").addEventListener("click", () => { showScreen("setup"); renderStats(); });
     $("#btn-reset-stats").addEventListener("click", () => {
       if(confirm("Azzerare tutte le statistiche salvate nel browser?")){
