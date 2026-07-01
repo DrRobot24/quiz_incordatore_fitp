@@ -4,18 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Super String 1.0 · Quiz incordatore FITP</title>
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <div class="wrap">
 
-  <header class="top">
-    <div class="brand">Super<span>String</span> 1.0</div>
-    <div class="tagline">360 domande · sessione 2025</div>
+  <header class="top" id="app-header">
+    <div class="brand-group">
+      <img class="brand-logo" src="public/Articolo-tennis.webp" alt="" aria-hidden="true">
+      <div class="brand">Super<span>String</span> 1.0</div>
+    </div>
+    <div class="tagline">360 domande · sessione 2026</div>
   </header>
 
+  <!-- WELCOME / SPLASH -->
+  <section id="screen-welcome" class="screen active">
+    <div class="welcome">
+      <div class="welcome-media">
+        <img src="public/campo_tennis.jpg" alt="Racchetta da tennis e pallina sulla terra rossa">
+        <span class="welcome-badge">🎾 Incordatore FITP · 2026</span>
+      </div>
+      <div class="welcome-body">
+        <h1 class="welcome-title">Super<span>String</span> 1.0</h1>
+        <p class="welcome-sub">La palestra di domande per l'esame ufficiale da <b>incordatore</b>. 360 domande, dispense collegate, progressi che ti seguono ovunque.</p>
+        <p class="motto welcome-motto">💪 Ogni errore è un colpo che impari a rispondere. 🔥 Allenati, insisti, non mollare. 🏆</p>
+        <button id="btn-enter" type="button" class="btn-enter">Entra in campo 🎾</button>
+        <p class="welcome-foot muted">Nessun account · nessun backend · i tuoi dati restano tuoi.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- SETUP -->
-  <section id="screen-setup" class="screen active">
+  <section id="screen-setup" class="screen">
     <div class="card">
       <h1>Imposta il tuo allenamento 🎾</h1>
       <p class="muted">Scegli argomenti, livello di confidenza e numero di domande. Le domande che hai già sbagliato in passato hanno più probabilità di ricomparire.</p>
@@ -148,6 +168,6 @@
   <footer>Super String 1.0 · Strumento di studio non ufficiale per l'esame incordatore FITP by <a href="https://www.encreade.com" target="_blank" rel="noopener">Encreade</a></footer>
 </div>
 
-<script src="app.js?v=9"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

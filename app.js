@@ -28,6 +28,7 @@
 
   const $ = (sel) => document.querySelector(sel);
   const screens = {
+    welcome: $("#screen-welcome"),
     setup: $("#screen-setup"),
     quiz: $("#screen-quiz"),
     results: $("#screen-results")
@@ -36,6 +37,10 @@
   function showScreen(name){
     Object.values(screens).forEach(s => s.classList.remove("active"));
     screens[name].classList.add("active");
+    // Lo splash ha il suo titolo grande: nascondo l'header compatto lì.
+    const header = $("#app-header");
+    if(header) header.style.display = (name === "welcome") ? "none" : "";
+    window.scrollTo(0, 0);
   }
 
   function loadStats(){
@@ -212,6 +217,9 @@
   function cssId(s){ return s.replace(/[^a-zA-Z0-9]/g, "_"); }
 
   function bindEvents(){
+    const enterBtn = $("#btn-enter");
+    if(enterBtn) enterBtn.addEventListener("click", () => showScreen("setup"));
+
     document.querySelectorAll('input[name="timed"]').forEach(r => {
       r.addEventListener("change", () => {
         $("#time-limit-field").style.display = $('input[name="timed"]:checked').value === "yes" ? "flex" : "none";

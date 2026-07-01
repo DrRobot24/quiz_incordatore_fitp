@@ -451,8 +451,87 @@ footer a:hover{ text-decoration: underline; }
 .sync-status.ok{ color: var(--ball-dark); font-weight:600; }
 .sync-status.ko{ color: var(--clay-dark); font-weight:600; }
 
+/* --- Header logo (campo stilizzato) --- */
+header.top .brand-group{ display:flex; align-items:center; gap:.7rem; }
+header.top .brand-logo{
+  width: 2.4rem; height: 2.4rem;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 2px solid rgba(255,255,255,.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
+  flex: 0 0 auto;
+}
+/* Prima che il JS parta, se lo splash è attivo l'header resta nascosto */
+body:has(#screen-welcome.active) #app-header{ display:none; }
+
+/* --- Welcome / splash --- */
+.welcome{
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -20px rgba(11,30,22,.7), 0 3px 0 rgba(11,30,22,.2);
+  border: 1px solid rgba(255,255,255,.5);
+  animation: welcome-in .6s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes welcome-in{
+  from{ opacity:0; transform: translateY(18px) scale(.985); }
+  to{ opacity:1; transform: none; }
+}
+.welcome-media{
+  position: relative;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+}
+.welcome-media img{
+  width:100%; height:100%; object-fit: cover; display:block;
+  transform: scale(1.03);
+  animation: welcome-zoom 12s ease-out both;
+}
+@keyframes welcome-zoom{ from{ transform: scale(1.12); } to{ transform: scale(1.03); } }
+.welcome-media::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(20,50,36,0) 40%, rgba(20,50,36,.55) 100%);
+}
+.welcome-badge{
+  position:absolute; left:1rem; top:1rem; z-index:1;
+  font-family: var(--font-mono);
+  font-size:.7rem; letter-spacing:.04em;
+  color: var(--ink);
+  background: rgba(207,224,72,.92);
+  padding:.3rem .7rem; border-radius:20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+.welcome-body{ padding: 1.7rem 1.7rem 2rem; text-align:center; }
+.welcome-title{
+  font-family: var(--font-display);
+  font-weight:700; text-transform:uppercase;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  letter-spacing:.02em; line-height:1;
+  color: var(--court-dark);
+  margin: 0 0 .6rem;
+}
+.welcome-title span{ color: var(--clay); }
+.welcome-sub{ color: var(--ink-soft); max-width: 46ch; margin: 0 auto 1.2rem; }
+.welcome-motto{ text-align:left; }
+.btn-enter{
+  font-size: 1.05rem;
+  padding: .95rem 2.4rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px -6px rgba(31,77,58,.6);
+  animation: enter-pulse 2.4s ease-in-out infinite;
+}
+@keyframes enter-pulse{
+  0%,100%{ box-shadow: 0 8px 20px -6px rgba(31,77,58,.55); }
+  50%{ box-shadow: 0 8px 26px -4px rgba(31,77,58,.85); }
+}
+.btn-enter:hover{ transform: translateY(-1px); }
+.welcome-foot{ margin: 1rem 0 0; font-size:.78rem; }
+
 @media (max-width: 480px){
   .wrap{ padding: 1.3rem 1rem 4rem; }
   .score-big{ font-size: 2.2rem; }
   .row{ flex-direction:column; align-items:stretch; }
+  header.top .brand-logo{ width:2rem; height:2rem; }
+  .welcome-media{ aspect-ratio: 16 / 10; }
+  .welcome-body{ padding: 1.3rem 1.1rem 1.6rem; }
 }
