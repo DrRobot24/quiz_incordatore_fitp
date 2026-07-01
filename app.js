@@ -553,11 +553,23 @@
     }
   }
 
+  const MAX_HISTORY = 50; // tiene leggero il payload cloud
+
   function finishQuiz(){
     const total = quiz.answers.length;
     const correctCount = quiz.answers.filter(a=>a.correct).length;
 
-    stats.history.push({ date: new Date().toISOString(), score: correctCount, total });
+    stats.history.push({
+      date: new Date().toISOString(),
+      score: correctCount,
+      total,
+      ids: quiz.answers.map(a => a.question.id),
+      timed: !!quiz.timed,
+      timeLimitSec: quiz.timeLimitSec || 0
+    });
+    if(stats.history.length > MAX_HISTORY){
+      stats.history = stats.history.slice(-MAX_HISTORY);
+    }
     saveStats();
 
     $("#progress-fill").style.width = "100%";
@@ -604,6 +616,39 @@
     renderStats();
   }
 
+  // Rilancia un test passato con le stesse identiche domande.
+  function retryHistoryQuiz(idx){
+    const h = stats.history[idx];
+    if(!h || !Array.isArray(h.ids) || h.ids.length === 0){
+      alert("Questo tentativo non ha le domande salvate (è precedente all'aggiornamento). Riprova con i quiz più recenti.");
+      return;
+    }
+    const byId = {};
+    ALL_QUESTIONS.forEach(q => { byId[q.id] = q; });
+    const questions = h.ids.map(id => byId[id]).filter(Boolean);
+    if(questions.length === 0){ alert("Domande non più disponibili."); return; }
+    launchQuiz(questions, !!h.timed, h.timeLimitSec || 0);
+  }
+
+  // Allenamento mirato: pesca dalle domande sbagliate almeno una volta.
+  function trainOnErrors(){
+    const wrongIds = Object.entries(stats.perQuestion)
+      .filter(([id,s]) => (s.wrong||0) > 0)
+      .map(([id]) => parseInt(id,10));
+    if(wrongIds.length === 0){
+      alert("Nessun errore registrato finora. Completa qualche quiz e i tuoi punti deboli appariranno qui.");
+      return;
+    }
+    const byId = {};
+    ALL_QUESTIONS.forEach(q => { byId[q.id] = q; });
+    let questions = wrongIds.map(id => byId[id]).filter(Boolean);
+    const cap = parseInt($("#num-questions").value, 10) || 20;
+    if(questions.length > cap) questions = weightedSample(questions, cap);
+    const timed = document.querySelector('input[name="timed"]:checked').value === "yes";
+    const minutes = parseInt($("#time-limit").value, 10) || 30;
+    launchQuiz(questions, timed, minutes * 60);
+  }
+
   function renderStats(){
     const statsCard = $("#stats-card");
     const total = Object.keys(stats.perQuestion).length;
@@ -614,23 +659,37 @@
     statsCard.style.display = "block";
 
     const attempts = stats.history.length;
-    const lastFive = stats.history.slice(-5).reverse();
-    const weakIds = Object.entries(stats.perQuestion)
-      .filter(([id,s]) => s.wrong > 0)
+    // indice reale nell'array history per ogni riga mostrata (per il "Rifai")
+    const lastFive = stats.history
+      .map((h, i) => ({ h, i }))
+      .slice(-5)
+      .reverse();
+    const weakEntries = Object.entries(stats.perQuestion)
+      .filter(([id,s]) => s.wrong > 0);
+    const weakIds = weakEntries
       .sort((a,b) => b[1].wrong - a[1].wrong)
       .slice(0,5)
       .map(([id]) => parseInt(id,10));
 
-    let html = `<p class="muted">${total} domande incontrate finora · ${attempts} quiz completati.</p>`;
+    let html = `<p class="muted">${total}/${ALL_QUESTIONS.length} domande già affrontate · ${attempts} quiz completati.</p>`;
+
+    if(weakEntries.length){
+      html += `<button class="clay btn-train" id="btn-train-errors" type="button">🎯 Allenati sui tuoi errori (${weakEntries.length})</button>`;
+    }
+
     if(lastFive.length){
-      html += `<div class="breakdown-row" style="border-bottom:none; padding-top:0;"><span class="name" style="font-family:var(--font-mono); font-size:.78rem; text-transform:uppercase; color:var(--ink-soft);">Ultimi tentativi</span></div>`;
-      lastFive.forEach(h => {
+      html += `<div class="stats-section-label">Ultimi tentativi</div>`;
+      lastFive.forEach(({h, i}) => {
         const d = new Date(h.date);
         const p = h.total ? Math.round((h.score/h.total)*100) : 0;
-        html += `<div class="breakdown-row">
-          <span class="name">${d.toLocaleDateString("it-IT")} ${d.toLocaleTimeString("it-IT",{hour:'2-digit',minute:'2-digit'})}</span>
-          <div class="bar"><div class="bar-fill" style="width:${p}%"></div></div>
-          <span class="pct">${h.score}/${h.total}</span>
+        const canRetry = Array.isArray(h.ids) && h.ids.length > 0;
+        html += `<div class="history-row">
+          <div class="history-info">
+            <span class="history-date">${d.toLocaleDateString("it-IT")} ${d.toLocaleTimeString("it-IT",{hour:'2-digit',minute:'2-digit'})}</span>
+            <div class="bar"><div class="bar-fill" style="width:${p}%"></div></div>
+            <span class="pct">${h.score}/${h.total}</span>
+          </div>
+          ${canRetry ? `<button class="ghost small btn-retry-history" type="button" data-idx="${i}">🔁 Rifai</button>` : ""}
         </div>`;
       });
     }
@@ -638,7 +697,14 @@
       const weakQs = weakIds.map(id => ALL_QUESTIONS.find(q=>q.id===id)).filter(Boolean);
       html += `<p class="muted" style="margin-top:1rem;">Punti più deboli: ${weakQs.map(q => (TOPIC_SHORT[q.topic]||q.topic)).filter((v,i,a)=>a.indexOf(v)===i).join(", ")}.</p>`;
     }
-    $("#stats-content").innerHTML = html;
+    const container = $("#stats-content");
+    container.innerHTML = html;
+
+    const trainBtn = $("#btn-train-errors");
+    if(trainBtn) trainBtn.addEventListener("click", trainOnErrors);
+    container.querySelectorAll(".btn-retry-history").forEach(btn => {
+      btn.addEventListener("click", () => retryHistoryQuiz(parseInt(btn.dataset.idx, 10)));
+    });
   }
 
   init();

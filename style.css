@@ -52,6 +52,8 @@ body::after{
   max-width: 760px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 5rem;
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
 }
 
 header.top{
@@ -596,13 +598,97 @@ body:has(#screen-welcome.active) #app-header{ display:none; }
 .btn-enter:hover{ transform: translateY(-1px); }
 .welcome-foot{ margin: 1rem 0 0; font-size:.78rem; }
 
-@media (max-width: 480px){
-  .wrap{ padding: 1.3rem 1rem 4rem; }
-  .score-big{ font-size: 2.2rem; }
-  .row{ flex-direction:column; align-items:stretch; }
+/* --- Statistiche: sezione, allenamento errori, cronologia con Rifai --- */
+.stats-section-label{
+  font-family: var(--font-mono);
+  font-size:.78rem; text-transform:uppercase; letter-spacing:.03em;
+  color: var(--ink-soft);
+  margin: 1rem 0 .3rem;
+}
+.btn-train{ width:100%; margin:.4rem 0 .6rem; }
+.history-row{
+  display:flex; align-items:center; gap:.7rem;
+  padding:.5rem 0; border-bottom:1px dashed var(--line);
+}
+.history-row:last-child{ border-bottom:none; }
+.history-info{ flex:1; display:flex; align-items:center; gap:.7rem; min-width:0; }
+.history-date{ font-size:.85rem; flex:1; min-width:0; }
+.history-info .bar{ flex:1.1; height:8px; background: var(--paper-dim); border-radius:4px; overflow:hidden; }
+.history-info .bar-fill{ height:100%; background: var(--court); }
+.history-info .pct{ font-family: var(--font-mono); font-size:.8rem; width:3.2rem; text-align:right; color: var(--ink-soft); }
+.btn-retry-history{ flex:0 0 auto; }
+
+/* =========================================================
+   MOBILE FIRST — la maggior parte degli utenti è da cellulare
+   ========================================================= */
+@media (max-width: 640px){
+  .wrap{ padding: 1.2rem 0.85rem 4rem; }
+
+  /* Tipografia più leggibile su piccolo schermo */
+  h1{ font-size: 1.25rem; }
+  h2{ font-size: 1.05rem; }
+  .question-text{ font-size: 1.02rem; }
+
+  /* Card più compatte ai lati, più aria dentro */
+  .card{ padding: 1.15rem 1rem; border-radius: 12px; }
+
+  /* Header brand */
+  header.top{ margin-bottom: 1.4rem; padding-bottom: .7rem; }
+  header.top .brand{ font-size: 1.2rem; }
   header.top .brand-logo{ width:2rem; height:2rem; }
-  .welcome-media{ aspect-ratio: 16 / 10; }
-  .welcome-body{ padding: 1.3rem 1.1rem 1.6rem; }
+  header.top .tagline{ font-size:.7rem; }
+
+  /* Setup: colonne in verticale */
+  .row{ flex-direction:column; align-items:stretch; gap:.9rem; }
+  .field{ width:100%; }
+  select, input[type=number], input[type=text]{ width:100%; font-size:16px; padding:.7rem .7rem; }
+
+  /* Confidenza / modalità: pill a piena larghezza, wrap */
+  .choices{ flex-wrap:wrap; gap:.4rem; }
+  .choices label{ flex:1 1 auto; text-align:center; padding:.6rem .7rem; }
+
+  /* Bottoni: tap target grandi, a piena larghezza, in colonna */
+  button{ padding:.85rem 1rem; font-size:.92rem; }
+  button.small{ padding:.5rem .8rem; font-size:.72rem; }
+  .actions{ flex-direction:column-reverse; align-items:stretch; gap:.6rem; }
+  .actions button{ width:100%; }
+
+  /* Toolbar argomenti: bottoni piccoli restano in riga, contatore a capo */
+  .topics-toolbar{ flex-wrap:wrap; }
+  .topic-card{ padding:.75rem .8rem; }
+  .topic-card-name{ font-size:.98rem; }
+
+  /* Welcome */
+  .welcome-media{ aspect-ratio: 3 / 2; }
+  .welcome-body{ padding: 1.2rem 1rem 1.5rem; }
+  .welcome-title{ font-size: clamp(1.7rem, 8vw, 2.2rem); }
+  .welcome-sync-row{ flex-direction:column; }
+  .welcome-sync-row button{ width:100%; }
   .welcome-actions{ flex-direction:column-reverse; align-items:stretch; }
   .welcome-actions button{ width:100%; }
+
+  /* Quiz */
+  .quiz-topbar{ gap:.4rem; }
+  .quiz-topbar button{ flex:1 1 auto; }
+  .option{ padding:.8rem .8rem; font-size:.98rem; }
+  .option .letter{ width:2.1rem; height:2.1rem; }
+  .btn-save.saved{ font-size:.7rem; }
+
+  /* Risultati */
+  .score-big{ font-size: 2.4rem; }
+  .history-info{ flex-wrap:wrap; gap:.4rem; }
+  .history-date{ flex:1 0 100%; }
+
+  /* Sync badge nel setup */
+  .sync-badge{ font-size:.78rem; padding:.55rem .7rem; }
+
+  /* Riferimento dispensa: apri a capo */
+  .ref{ font-size:.82rem; }
+  .ref .ref-open{ margin-left:0; }
+}
+
+/* Schermi molto stretti */
+@media (max-width: 360px){
+  .welcome-title{ font-size: 1.6rem; }
+  .choices label{ font-size:.8rem; }
 }
