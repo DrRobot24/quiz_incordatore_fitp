@@ -37,7 +37,7 @@ body::before{
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: url("public/tennis.webp") center center / cover no-repeat;
+  background: url("public/terra_rossa.jpg") center center / cover no-repeat;
 }
 /* dark overlay so white cards + light text stay readable over the photo */
 body::after{
