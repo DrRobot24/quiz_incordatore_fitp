@@ -2,6 +2,8 @@
   "use strict";
 
   const STORAGE_KEY = "incordatore_fitp_stats_v1";
+  const SYNC_CODE_KEY = "incordatore_fitp_sync_code";
+  const API_URL = "/api/progress";
   const TOPIC_SHORT = {
     "1. Corde & Fisica corde": "Corde & fisica",
     "2. Racchette & Fisica attrezzo": "Racchette",
@@ -45,6 +47,107 @@
   }
   function saveStats(){
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
+    autoCloudPush();
+  }
+
+  // ---- Sync cloud (Redis via /api/progress) ----
+  const CODE_RE = /^[a-z0-9]+(-[a-z0-9]+){1,4}$/;
+  let cloudPushTimer = null;
+
+  function getSyncCode(){
+    return (localStorage.getItem(SYNC_CODE_KEY) || "").trim();
+  }
+  function setSyncCode(code){
+    localStorage.setItem(SYNC_CODE_KEY, code);
+  }
+  function isValidCode(code){
+    return typeof code === "string" && code.length >= 4 && code.length <= 60 && CODE_RE.test(code);
+  }
+  function generateCode(){
+    const a = ["tennis","corda","racchetta","tensione","gioco","match","set","ace","volee","rovescio","dritto","servizio"];
+    const pick = () => a[Math.floor(Math.random()*a.length)];
+    const num = Math.floor(1000 + Math.random()*9000);
+    return `${pick()}-${pick()}-${num}`;
+  }
+  function setSyncStatus(msg, kind){
+    const el = $("#sync-status");
+    if(!el) return;
+    el.textContent = msg || "";
+    el.className = "muted sync-status" + (kind ? " " + kind : "");
+  }
+
+  // Fonde due stati: max di seen/wrong per domanda, unione delle history.
+  function mergeStats(local, remote){
+    if(!remote || typeof remote !== "object") return local;
+    const out = { perQuestion: {}, history: [] };
+    const ids = new Set([
+      ...Object.keys(local.perQuestion || {}),
+      ...Object.keys(remote.perQuestion || {})
+    ]);
+    ids.forEach(id => {
+      const l = (local.perQuestion || {})[id] || { seen:0, wrong:0 };
+      const r = (remote.perQuestion || {})[id] || { seen:0, wrong:0 };
+      out.perQuestion[id] = {
+        seen: Math.max(l.seen||0, r.seen||0),
+        wrong: Math.max(l.wrong||0, r.wrong||0)
+      };
+    });
+    const seen = new Set();
+    [...(local.history||[]), ...(remote.history||[])].forEach(h => {
+      const k = (h && h.date) ? h.date : JSON.stringify(h);
+      if(seen.has(k)) return;
+      seen.add(k);
+      out.history.push(h);
+    });
+    out.history.sort((a,b) => new Date(a.date) - new Date(b.date));
+    return out;
+  }
+
+  function autoCloudPush(){
+    const code = getSyncCode();
+    if(!isValidCode(code)) return;
+    clearTimeout(cloudPushTimer);
+    cloudPushTimer = setTimeout(() => { cloudPush(code, true); }, 1500);
+  }
+
+  function cloudPush(code, silent){
+    if(!isValidCode(code)){ setSyncStatus("Codice non valido.", "ko"); return Promise.resolve(false); }
+    if(!silent) setSyncStatus("Salvataggio sul cloud…");
+    return fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code, data: stats })
+    }).then(r => {
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      if(!silent) setSyncStatus("✅ Progressi salvati sul cloud.", "ok");
+      return true;
+    }).catch(err => {
+      console.error(err);
+      setSyncStatus("⚠️ Errore nel salvataggio cloud.", "ko");
+      return false;
+    });
+  }
+
+  function cloudLoad(code){
+    if(!isValidCode(code)){ setSyncStatus("Codice non valido. Usa lettere/numeri e trattini, es. tennis-corda-4821.", "ko"); return; }
+    setSyncStatus("Caricamento dal cloud…");
+    fetch(API_URL + "?code=" + encodeURIComponent(code))
+      .then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(res => {
+        if(!res.data){
+          setSyncStatus("Nessun progresso trovato per questo codice. Verrà creato al primo salvataggio.", "");
+          return;
+        }
+        stats = mergeStats(stats, res.data);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
+        renderStats();
+        setSyncStatus("✅ Progressi caricati e uniti.", "ok");
+        cloudPush(code, true);
+      })
+      .catch(err => {
+        console.error(err);
+        setSyncStatus("⚠️ Errore nel caricamento dal cloud.", "ko");
+      });
   }
 
   function init(){
@@ -128,6 +231,37 @@
       const wrongQuestions = quiz.answers.filter(a => !a.correct).map(a => a.question);
       if(wrongQuestions.length === 0) return;
       launchQuiz(wrongQuestions, quiz.timed, quiz.timeLimitSec);
+    });
+
+    // ---- Sync ----
+    const codeInput = $("#sync-code");
+    if(codeInput){
+      const saved = getSyncCode();
+      if(saved) codeInput.value = saved;
+      codeInput.addEventListener("input", () => {
+        const v = codeInput.value.trim().toLowerCase();
+        codeInput.value = v;
+        if(isValidCode(v)){ setSyncCode(v); setSyncStatus(""); }
+      });
+    }
+    const genBtn = $("#btn-sync-generate");
+    if(genBtn) genBtn.addEventListener("click", () => {
+      const code = generateCode();
+      $("#sync-code").value = code;
+      setSyncCode(code);
+      setSyncStatus("Codice generato. Salvalo sul cloud e riusalo sugli altri dispositivi.", "ok");
+    });
+    const saveBtn = $("#btn-sync-save");
+    if(saveBtn) saveBtn.addEventListener("click", () => {
+      const code = $("#sync-code").value.trim().toLowerCase();
+      setSyncCode(code);
+      cloudPush(code, false);
+    });
+    const loadBtn = $("#btn-sync-load");
+    if(loadBtn) loadBtn.addEventListener("click", () => {
+      const code = $("#sync-code").value.trim().toLowerCase();
+      setSyncCode(code);
+      cloudLoad(code);
     });
   }
 

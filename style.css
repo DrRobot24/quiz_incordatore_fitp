@@ -429,6 +429,14 @@ a.ref:hover{ background: var(--court-dark); }
 .wrong-item .a b{ color: var(--clay-dark); }
 
 footer{ text-align:center; color: rgba(255,255,255,.78); font-size:.78rem; margin-top: 3rem; font-family: var(--font-mono); text-shadow: 0 1px 3px rgba(0,0,0,.4); }
+footer a{ color: var(--ball); text-decoration: none; font-weight: 700; }
+footer a:hover{ text-decoration: underline; }
+
+/* --- Sync cloud --- */
+#sync-card #sync-code{ font-family: var(--font-mono); }
+.sync-status{ margin-top:.6rem; min-height:1.1em; }
+.sync-status.ok{ color: var(--ball-dark); font-weight:600; }
+.sync-status.ko{ color: var(--clay-dark); font-weight:600; }
 
 @media (max-width: 480px){
   .wrap{ padding: 1.3rem 1rem 4rem; }
