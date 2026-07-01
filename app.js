@@ -48,7 +48,7 @@
   }
 
   function init(){
-    fetch("data.json")
+    fetch("data.json?v=4")
       .then(r => r.json())
       .then(data => {
         ALL_QUESTIONS = data;
@@ -68,12 +68,30 @@
     const topics = Object.keys(counts).sort();
     const container = $("#topics-list");
     container.innerHTML = topics.map(t => `
-      <div class="topic-row">
+      <label class="topic-card" for="topic-${cssId(t)}">
         <input type="checkbox" class="topic-check" value="${t}" checked id="topic-${cssId(t)}">
-        <label for="topic-${cssId(t)}">${TOPIC_SHORT[t] || t}</label>
+        <span class="topic-card-check" aria-hidden="true"></span>
+        <span class="topic-card-name">${TOPIC_SHORT[t] || t}</span>
         <span class="count">${counts[t]}</span>
-      </div>
+      </label>
     `).join("");
+    container.querySelectorAll(".topic-check").forEach(c => {
+      c.addEventListener("change", updateTopicsCount);
+    });
+    updateTopicsCount();
+  }
+
+  function updateTopicsCount(){
+    const el = $("#topics-selected-count");
+    if(!el) return;
+    const n = getSelectedTopics().length;
+    const tot = document.querySelectorAll(".topic-check").length;
+    el.textContent = `${n}/${tot} selezionati`;
+  }
+
+  function setAllTopics(checked){
+    document.querySelectorAll(".topic-check").forEach(c => { c.checked = checked; });
+    updateTopicsCount();
   }
 
   function cssId(s){ return s.replace(/[^a-zA-Z0-9]/g, "_"); }
@@ -84,6 +102,9 @@
         $("#time-limit-field").style.display = $('input[name="timed"]:checked').value === "yes" ? "flex" : "none";
       });
     });
+
+    $("#btn-topics-all").addEventListener("click", () => setAllTopics(true));
+    $("#btn-topics-none").addEventListener("click", () => setAllTopics(false));
 
     $("#btn-start").addEventListener("click", startQuiz);
     $("#btn-confirm").addEventListener("click", confirmAnswer);
@@ -180,8 +201,14 @@
       answeredCurrent: false
     };
     showScreen("quiz");
-    if(timed) startTimer();
-    else $("#timer-display").textContent = "";
+    const panel = $("#timer-panel");
+    if(timed){
+      panel.style.display = "flex";
+      startTimer();
+    } else {
+      panel.style.display = "none";
+      $("#timer-display").textContent = "";
+    }
     renderQuestion();
   }
 
@@ -202,9 +229,17 @@
   function updateTimerDisplay(){
     const m = Math.floor(quiz.secondsLeft/60);
     const s = quiz.secondsLeft%60;
-    const el = $("#timer-display");
-    el.textContent = `${m}:${String(s).padStart(2,"0")}`;
-    el.classList.toggle("warn", quiz.secondsLeft <= 60);
+    const text = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+    const warn = quiz.secondsLeft <= 60;
+
+    const inline = $("#timer-display");
+    inline.textContent = text;
+    inline.classList.toggle("warn", warn);
+
+    const big = $("#timer-big");
+    const panel = $("#timer-panel");
+    if(big) big.textContent = text;
+    if(panel) panel.classList.toggle("warn", warn);
   }
 
   function renderQuestion(){
@@ -248,6 +283,16 @@
     $("#btn-confirm").disabled = false;
   }
 
+  function refHtml(ref){
+    if(!ref || !ref.pdf){
+      return `<div class="ref ref-none">📖 Argomento trasversale — rivedi le dispense generali.</div>`;
+    }
+    const url = "public/" + encodeURIComponent(ref.pdf) + "#page=" + ref.page;
+    return `<a class="ref" href="${url}" target="_blank" rel="noopener">
+      📖 Dispensa: <b>${ref.label}</b> · pag. <b>${ref.page}</b> <span class="ref-open">apri ↗</span>
+    </a>`;
+  }
+
   function confirmAnswer(){
     if(!selectedLetter || quiz.answeredCurrent) return;
     quiz.answeredCurrent = true;
@@ -264,6 +309,7 @@
     fb.innerHTML = `<div class="feedback ${correct?"ok":"ko"}">
       <span class="label">${correct ? "Esatto" : "Risposta errata · corretta: " + q.answer}</span>
       ${q.explanation}
+      ${(!correct) ? refHtml(q.ref) : ""}
     </div>`;
 
     quiz.answers.push({ question: q, given: selectedLetter, correct });
@@ -332,6 +378,7 @@
         <div class="wrong-item">
           <div class="q">${a.question.question}</div>
           <div class="a">Hai risposto <b>${a.given}</b> · corretta <b>${a.question.answer}</b> — ${a.question.explanation}</div>
+          ${refHtml(a.question.ref)}
         </div>
       `).join("");
     } else {

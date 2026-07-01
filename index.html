@@ -3,25 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incordatore FITP · Quiz di studio</title>
-<link rel="stylesheet" href="style.css">
+<title>Super String 1.0 · Quiz incordatore FITP</title>
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div class="wrap">
 
   <header class="top">
-    <div class="brand">Incordatore<span>FITP</span></div>
+    <div class="brand">Super<span>String</span> 1.0</div>
     <div class="tagline">360 domande · sessione 2025</div>
   </header>
 
   <!-- SETUP -->
   <section id="screen-setup" class="screen active">
     <div class="card">
-      <h1>Imposta il tuo allenamento</h1>
+      <h1>Imposta il tuo allenamento 🎾</h1>
       <p class="muted">Scegli argomenti, livello di confidenza e numero di domande. Le domande che hai già sbagliato in passato hanno più probabilità di ricomparire.</p>
+      <p class="motto">💪 Ogni errore è un colpo che impari a rispondere. 🔥 Allenati, insisti, non mollare. 🏆</p>
 
       <fieldset id="topics-fieldset">
         <legend>Argomenti</legend>
+        <p class="muted" style="margin-bottom:.8rem;">Tocca gli argomenti su cui vuoi allenarti. Riceverai solo domande dei temi selezionati.</p>
+        <div class="topics-toolbar">
+          <button class="ghost small" id="btn-topics-all" type="button">Seleziona tutti</button>
+          <button class="ghost small" id="btn-topics-none" type="button">Nessuno</button>
+          <span class="topics-selected-count" id="topics-selected-count"></span>
+        </div>
         <div id="topics-list"></div>
       </fieldset>
 
@@ -54,7 +61,7 @@
 
       <div class="actions">
         <button class="ghost" id="btn-reset-stats" type="button">Azzera statistiche salvate</button>
-        <button id="btn-start" type="button">Inizia quiz</button>
+        <button id="btn-start" type="button">🎾 Inizia quiz 💪</button>
       </div>
     </div>
 
@@ -71,6 +78,11 @@
       <div class="quiz-meta">
         <span id="progress-label">Domanda 1 / 20</span>
         <span class="timer" id="timer-display"></span>
+      </div>
+      <div class="timer-panel" id="timer-panel" style="display:none;">
+        <span class="timer-icon" aria-hidden="true">⏱</span>
+        <span class="timer-label">Tempo</span>
+        <span class="timer-big" id="timer-big">--:--</span>
       </div>
 
       <span class="topic-tag" id="q-topic"></span>
@@ -113,6 +125,6 @@
   <footer>STARVIS · Strumento di studio non ufficiale per l'esame incordatore FITP</footer>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

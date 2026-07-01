@@ -11,7 +11,12 @@
   },
   "answer": "D",
   "explanation": "Stesso materiale: diametro maggiore = sezione maggiore = più rigida staticamente.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 2,
@@ -25,7 +30,12 @@
   },
   "answer": "A",
   "explanation": "Il poliestere ha modulo elastico che CALA con l'aumentare del carico.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 122
+  }
  },
  {
   "id": 3,
@@ -39,7 +49,12 @@
   },
   "answer": "D",
   "explanation": "Stesso soft: 1,35 = diametro maggiore = più rigido = meno comfortevole.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 4,
@@ -53,7 +68,12 @@
   },
   "answer": "A",
   "explanation": "Budello naturale = corda più potente (restituzione ~95%) e confortevole.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 5,
@@ -67,7 +87,12 @@
   },
   "answer": "B",
   "explanation": "Legno = molto elastico/flessibile: vibra a bassa frequenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 6,
@@ -81,7 +106,12 @@
   },
   "answer": "D",
   "explanation": "Nessun vincolo assoluto: le tensioni V/O si possono differenziare.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 7,
@@ -95,7 +125,12 @@
   },
   "answer": "A",
   "explanation": "L'impatto palla-corda dura circa 4-5 millisecondi.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 8,
@@ -109,7 +144,12 @@
   },
   "answer": "A",
   "explanation": "Sì, il colore incide sulla PERCEZIONE (psicologico-visiva).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 9,
@@ -123,7 +163,12 @@
   },
   "answer": "A",
   "explanation": "Gauge 18 = sottile; fra le opzioni la fascia più sottile 1,18-1,22mm.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 3
+  }
  },
  {
   "id": 10,
@@ -137,7 +182,12 @@
   },
   "answer": "A",
   "explanation": "Sì, differenziare le tensioni gestisce la deformazione differenziale.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 11,
@@ -151,7 +201,12 @@
   },
   "answer": "C",
   "explanation": "Le orizzontali sono MENO tese delle verticali (5-15%) per gli attriti.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 12,
@@ -165,7 +220,12 @@
   },
   "answer": "A",
   "explanation": "Sì, il suono incide in modo fondamentale sulla potenza PERCEPITA.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 13,
@@ -179,7 +239,12 @@
   },
   "answer": "B",
   "explanation": "Feathering = movimento oscillatorio che facilita il passaggio delle orizzontali.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 14,
@@ -193,7 +258,12 @@
   },
   "answer": "D",
   "explanation": "Weaving = intreccio sopra-sotto rispetto alle verticali installate.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 15,
@@ -207,7 +277,12 @@
   },
   "answer": "B",
   "explanation": "Calibri differenziati = snapback: potenza percepita e rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 24
+  }
  },
  {
   "id": 16,
@@ -221,7 +296,12 @@
   },
   "answer": "B",
   "explanation": "Tassativo: orizzontali sempre dall'ALTO al basso.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 17,
@@ -235,7 +315,12 @@
   },
   "answer": "B",
   "explanation": "16x19 ponte 4 archetti: 2 nodi standard fattibile senza ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 18,
@@ -249,7 +334,12 @@
   },
   "answer": "D",
   "explanation": "Sì, a parità di corda la tensione si confronta dal suono (ERT).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 19,
@@ -263,7 +353,12 @@
   },
   "answer": "D",
   "explanation": "Il legno è meno rigido di vetro/carbonio/compositi: non più rigido di nessuna.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 20,
@@ -277,7 +372,12 @@
   },
   "answer": "A",
   "explanation": "La perdita statica dipende da temperatura e umidità ambientale.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 21,
@@ -291,7 +391,12 @@
   },
   "answer": "C",
   "explanation": "Nylon-poliammide (multi): modulo INCREMENTALE, cresce col carico.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 122
+  }
  },
  {
   "id": 22,
@@ -305,7 +410,12 @@
   },
   "answer": "A",
   "explanation": "21 orizzontali (dispari): 1ª e ultima dispari -> stesso weaving.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 23,
@@ -319,7 +429,12 @@
   },
   "answer": "C",
   "explanation": "Una sola pinza obbliga a ricorrere alle starting clamp.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 24
+  }
  },
  {
   "id": 24,
@@ -333,7 +448,12 @@
   },
   "answer": "B",
   "explanation": "Cross-over = passaggio errato all'esterno del telaio (accavallamento).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 28
+  }
  },
  {
   "id": 25,
@@ -347,7 +467,12 @@
   },
   "answer": "B",
   "explanation": "Dopo il budello comparve per prima la sintetica nylon/synthetic-gut.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 26,
@@ -361,7 +486,12 @@
   },
   "answer": "C",
   "explanation": "Rigidezza effettiva = funzione di geometria dell'ovale e spaziatura/pattern.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 27,
@@ -375,7 +505,12 @@
   },
   "answer": "A",
   "explanation": "12x14 ponte 3 archetti a 2 nodi richiede pattern ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 28,
@@ -389,7 +524,12 @@
   },
   "answer": "B",
   "explanation": "Verticali grosse = più rigide = si spostano meno: NON favorisce lo spostamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 29,
@@ -403,7 +543,12 @@
   },
   "answer": "A",
   "explanation": "19 orizzontali (dispari): 1ª e ultima dispari -> stesso weaving.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 30,
@@ -417,7 +562,12 @@
   },
   "answer": "D",
   "explanation": "Burning = bruciatura per eccessiva velocità di passaggio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 31,
@@ -431,7 +581,12 @@
   },
   "answer": "B",
   "explanation": "18 orizzontali (pari): 1ª (dispari) e ultima (pari) -> weaving contrapposto.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 32,
@@ -445,7 +600,12 @@
   },
   "answer": "B",
   "explanation": "Box/Universal: rischio errore su 1ª e 2ª corda verticale.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 33,
@@ -459,7 +619,12 @@
   },
   "answer": "B",
   "explanation": "Diametro maggiore sulle orizzontali = verticali sottili mobili -> potenza/rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 34,
@@ -473,7 +638,12 @@
   },
   "answer": "D",
   "explanation": "'Snorkeling' non è un difetto codificato (2 opzioni identiche) -> nulla.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 35,
@@ -487,7 +657,12 @@
   },
   "answer": "C",
   "explanation": "Puller = testa mobile: sistema di bloccaggio e trazione della corda.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 13
+  }
  },
  {
   "id": 36,
@@ -501,7 +676,12 @@
   },
   "answer": "D",
   "explanation": "Notching = piccola intaccatura/usura sulla corda.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 37,
@@ -515,7 +695,12 @@
   },
   "answer": "A",
   "explanation": "Buttcap = tappo di fondo del manico.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 9
+  }
  },
  {
   "id": 38,
@@ -529,7 +714,12 @@
   },
   "answer": "C",
   "explanation": "Diablo: con corde delicate, per limitare lo stress sul filamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 39,
@@ -543,7 +733,12 @@
   },
   "answer": "B",
   "explanation": "Tensione scelta per DEFORMARE il filamento e attivarne la risposta.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 40,
@@ -557,7 +752,12 @@
   },
   "answer": "D",
   "explanation": "Carbonio 100% più rigido di vetro/compositi: non meno rigido di nessuna.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 41,
@@ -571,7 +771,12 @@
   },
   "answer": "C",
   "explanation": "Massa minore = più vibrazioni: 280g (più leggera) vibra più della 300g.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 42,
@@ -585,7 +790,12 @@
   },
   "answer": "A",
   "explanation": "Mis-weave = non rispetta la sequenza sotto-sopra rispetto alle verticali.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 24
+  }
  },
  {
   "id": 43,
@@ -599,7 +809,12 @@
   },
   "answer": "A",
   "explanation": "Twisting = piegatura ad elica della corda sotto trazione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 44,
@@ -613,7 +828,12 @@
   },
   "answer": "A",
   "explanation": "Gommino: agisce sul SUONO della corda (frequenze medio-alte).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 34
+  }
  },
  {
   "id": 45,
@@ -627,7 +847,12 @@
   },
   "answer": "D",
   "explanation": "Draw-back = ritorno della pinza dopo il rilascio della corda.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 43
+  }
  },
  {
   "id": 46,
@@ -641,7 +866,12 @@
   },
   "answer": "A",
   "explanation": "Sì, indice di qualità: ogni mm di ritorno = perdita ~500-1000g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 29
+  }
  },
  {
   "id": 47,
@@ -655,7 +885,8 @@
   },
   "answer": "C",
   "explanation": "Telai 25\"-26\" -> pallina GREEN.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 48,
@@ -669,7 +900,12 @@
   },
   "answer": "D",
   "explanation": "Kramer: il MASSIMO peso che riesci a manovrare con agio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 66
+  }
  },
  {
   "id": 49,
@@ -683,7 +919,12 @@
   },
   "answer": "B",
   "explanation": "Gommino fuori dall'area di gioco (sopra la 1ª/sotto l'ultima o laterale).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 127
+  }
  },
  {
   "id": 50,
@@ -697,7 +938,12 @@
   },
   "answer": "A",
   "explanation": "Esistono strumenti elettronici (ERT) e meccanici: valore RELATIVO.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 51,
@@ -711,7 +957,12 @@
   },
   "answer": "A",
   "explanation": "Livello cerbiatto/super-cerbiatto: 15\"-17\".",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 52,
@@ -725,7 +976,12 @@
   },
   "answer": "D",
   "explanation": "Bumperguard = paracolpi di testa.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 9
+  }
  },
  {
   "id": 53,
@@ -739,7 +995,12 @@
   },
   "answer": "D",
   "explanation": "Piano per lavorare senza piegarsi, braccia a ~90° (ergonomia).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 40
+  }
  },
  {
   "id": 54,
@@ -753,7 +1014,12 @@
   },
   "answer": "A",
   "explanation": "Elettronica constant-pull = più efficace nella restituzione tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 29
+  }
  },
  {
   "id": 55,
@@ -767,7 +1033,12 @@
   },
   "answer": "C",
   "explanation": "Verticale a sezione maggiore = più rigida; minimizzando attriti si esalta lo snapback.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 56,
@@ -781,7 +1052,12 @@
   },
   "answer": "A",
   "explanation": "A parità di tensione un piatto piccolo (corde corte) è più RIGIDO.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 57,
@@ -795,7 +1071,12 @@
   },
   "answer": "D",
   "explanation": "Dampener: assorbe le vibrazioni della CORDA in termini acustici.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 58,
@@ -809,7 +1090,12 @@
   },
   "answer": "D",
   "explanation": "Racchetta standard = 27\" = 686mm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 59,
@@ -823,7 +1109,12 @@
   },
   "answer": "D",
   "explanation": "Controllo tensione reale al termine di OGNI incordatura.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 60,
@@ -837,7 +1128,8 @@
   },
   "answer": "B",
   "explanation": "Epicondilite ('tennis elbow') -> tecnicamente legata al ROVESCIO.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 61,
@@ -851,7 +1143,8 @@
   },
   "answer": "B",
   "explanation": "Restituzione orange ~41-47% (red<orange<green<yellow).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 62,
@@ -865,7 +1158,12 @@
   },
   "answer": "A",
   "explanation": "Corde meno tese = più potenza percepita, parabole più alte/lunghe.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 63,
@@ -879,7 +1177,12 @@
   },
   "answer": "A",
   "explanation": "Per raddrizzare/allineare le corde si usa il set-off tool (raddrizzatore).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 64,
@@ -893,7 +1196,8 @@
   },
   "answer": "C",
   "explanation": "Restituzione green ~47-53%.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 65,
@@ -907,7 +1211,12 @@
   },
   "answer": "C",
   "explanation": "Nell'ibrido gli attriti hanno ruolo determinante nel comportamento dinamico.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 155
+  }
  },
  {
   "id": 66,
@@ -921,7 +1230,12 @@
   },
   "answer": "A",
   "explanation": "Nell'ibrido le rigidezze delle corde hanno ruolo determinante.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 67,
@@ -935,7 +1249,12 @@
   },
   "answer": "C",
   "explanation": "Telaio leggero (<280-285g) -> multifilamento/syntgut (bassa rigidezza dinamica).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 68,
@@ -949,7 +1268,12 @@
   },
   "answer": "C",
   "explanation": "Junior 26\": tensione bassa ~20-24kg.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 69,
@@ -963,7 +1287,12 @@
   },
   "answer": "B",
   "explanation": "Soft-poly è più morbida del poly a parità di sezione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 70,
@@ -977,7 +1306,12 @@
   },
   "answer": "D",
   "explanation": "Telaio junior -> multifilamento/syntgut (morbida, basso shock).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 71,
@@ -991,7 +1325,12 @@
   },
   "answer": "A",
   "explanation": "Racchette leggere -> corde a bassa rigidezza dinamica per minimizzare lo shock.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 72,
@@ -1005,7 +1344,12 @@
   },
   "answer": "D",
   "explanation": "Pulizia macchina a cadenza regolare in relazione all'uso.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 73,
@@ -1019,7 +1363,12 @@
   },
   "answer": "D",
   "explanation": "Problemi al gomito -> 16-22kg con corda a bassa rigidezza dinamica.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 74,
@@ -1033,7 +1382,12 @@
   },
   "answer": "A",
   "explanation": "Gli string savers limitano lo spostamento delle corde -> piatto più rigido.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 127
+  }
  },
  {
   "id": 75,
@@ -1047,7 +1401,12 @@
   },
   "answer": "B",
   "explanation": "Limite di buona pratica fra V e O = circa 2kg (oltre rischio garanzia).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 76,
@@ -1061,7 +1420,12 @@
   },
   "answer": "B",
   "explanation": "Seguo le indicazioni della casa purché non creino passaggi inadeguati.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 77,
@@ -1075,7 +1439,12 @@
   },
   "answer": "C",
   "explanation": "Per serrare il nodo si usa la pinza (stringi-nodi).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 78,
@@ -1089,7 +1458,12 @@
   },
   "answer": "A",
   "explanation": "Potenza crescente: kevlar < poliestere < syntgut < multifilamento < budello.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 79,
@@ -1103,7 +1477,12 @@
   },
   "answer": "A",
   "explanation": "Il numero di orizzontali è determinante per controllo e presa delle rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 80,
@@ -1117,7 +1496,12 @@
   },
   "answer": "D",
   "explanation": "Ibrido mono-multi: tipo, calibro e tensioni scelti in base agli obiettivi.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 81,
@@ -1131,7 +1515,12 @@
   },
   "answer": "B",
   "explanation": "Nell'ibrido si verifica la combinazione per MASSIMIZZARE l'attivazione dinamica.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 82,
@@ -1145,7 +1534,12 @@
   },
   "answer": "A",
   "explanation": "Nell'ibrido la verticale è determinante per potenza/controllo (elasticità e tensione).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 83,
@@ -1159,7 +1553,12 @@
   },
   "answer": "C",
   "explanation": "Mono ai bambini <12-14: rischio shock da impatto e infortuni.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 84,
@@ -1173,7 +1572,12 @@
   },
   "answer": "D",
   "explanation": "Più corta (stesso peso) = meno inerzia = più maneggevole.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 85,
@@ -1187,7 +1591,8 @@
   },
   "answer": "A",
   "explanation": "La pallina più morbida fra queste è la red.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 86,
@@ -1201,7 +1606,8 @@
   },
   "answer": "D",
   "explanation": "Restituzione yellow (standard) ~53-58%.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 87,
@@ -1215,7 +1621,12 @@
   },
   "answer": "C",
   "explanation": "Differenza V-O >2kg: rischio deformazione tale da far decadere la garanzia.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 88,
@@ -1229,7 +1640,8 @@
   },
   "answer": "B",
   "explanation": "Palla orange ~36-47g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 89,
@@ -1243,7 +1655,12 @@
   },
   "answer": "C",
   "explanation": "Spalla = problema di potenza del telaio -> privilegiare il controllo (racchetta+corde).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 90,
@@ -1257,7 +1674,12 @@
   },
   "answer": "B",
   "explanation": "Livello delfino/super-delfino: 19\"-21\".",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 91,
@@ -1271,7 +1693,12 @@
   },
   "answer": "C",
   "explanation": "ATW = incordare a 2 nodi iniziando le orizzontali dall'alto al basso.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 92,
@@ -1285,7 +1712,8 @@
   },
   "answer": "A",
   "explanation": "Palla foam (schiuma) ~25-46g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 93,
@@ -1299,7 +1727,8 @@
   },
   "answer": "A",
   "explanation": "Palla red ~25-46g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 94,
@@ -1313,7 +1742,12 @@
   },
   "answer": "C",
   "explanation": "Si passa al 27\" quando lo si muove alla stessa velocità del 26\".",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 95,
@@ -1327,7 +1761,12 @@
   },
   "answer": "A",
   "explanation": "Profilo maggiore = più rigido: 21mm più rigida di 20mm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 96,
@@ -1341,7 +1780,12 @@
   },
   "answer": "C",
   "explanation": "Coccodrillo/super-coccodrillo GREEN: 25\"-26\".",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 97,
@@ -1355,7 +1799,12 @@
   },
   "answer": "B",
   "explanation": "Si passa a una racchetta più pesante quando la si muove come quella leggera.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 66
+  }
  },
  {
   "id": 98,
@@ -1369,7 +1818,12 @@
   },
   "answer": "B",
   "explanation": "Controlli il verso e apponi il logo dallo stesso verso del tappo.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 99,
@@ -1383,7 +1837,12 @@
   },
   "answer": "D",
   "explanation": "Pattern denso-fitto = controllo in fase di spinta.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 100,
@@ -1397,7 +1856,12 @@
   },
   "answer": "C",
   "explanation": "I grommet si rovinano dove si fanno i nodi (ore 5-7 / 11-1).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 101,
@@ -1411,7 +1875,12 @@
   },
   "answer": "B",
   "explanation": "Profilo 30mm = racchetta rigida orientata a spinta/potenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 102,
@@ -1425,7 +1894,12 @@
   },
   "answer": "B",
   "explanation": "Tweener moderna ~290-305g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 3
+  }
  },
  {
   "id": 103,
@@ -1439,7 +1913,12 @@
   },
   "answer": "B",
   "explanation": "Differenza O-V >2kg: rischio deformazione tale da far decadere la garanzia.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 104,
@@ -1453,7 +1932,12 @@
   },
   "answer": "A",
   "explanation": "Durata meccanica = tempo utile a rottura del filamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 105,
@@ -1467,7 +1951,12 @@
   },
   "answer": "B",
   "explanation": "Durata dinamica = tempo utile per la risposta elasto-dinamica del filamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 106,
@@ -1481,7 +1970,12 @@
   },
   "answer": "C",
   "explanation": "Per un confronto corretto: stessa corda e stessa tensione della precedente.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 107,
@@ -1495,7 +1989,12 @@
   },
   "answer": "A",
   "explanation": "Sì, differenziare le tensioni ha senso per aumentare la potenza percepita.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 108,
@@ -1509,7 +2008,12 @@
   },
   "answer": "A",
   "explanation": "Sì, differenziare le tensioni ha senso per aumentare il comfort.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 109,
@@ -1523,7 +2027,12 @@
   },
   "answer": "D",
   "explanation": "24-22kg (V>O) è fattibile: 'nessuna delle precedenti' (negano possibilità).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 110,
@@ -1537,7 +2046,12 @@
   },
   "answer": "C",
   "explanation": "XL = lunghezza maggiore dello standard.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 111,
@@ -1551,7 +2065,12 @@
   },
   "answer": "C",
   "explanation": "L3 4 3/8 = perimetro del manico in pollici, comprensivo di grip.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 112,
@@ -1565,7 +2084,12 @@
   },
   "answer": "A",
   "explanation": "Sì, le dimensioni del manico influenzano l'insorgere di patologie al braccio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 113,
@@ -1579,7 +2103,12 @@
   },
   "answer": "A",
   "explanation": "Carbonio HM (high modulus) = il più rigido.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 122
+  }
  },
  {
   "id": 114,
@@ -1593,7 +2122,12 @@
   },
   "answer": "A",
   "explanation": "Il pre-stretch stabilizza tensionalmente e irrigidisce leggermente la corda.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 115,
@@ -1607,7 +2141,12 @@
   },
   "answer": "C",
   "explanation": "Massima potenza in poly: basso modulo elastico e sottile 1,18-1,25mm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 116,
@@ -1621,7 +2160,12 @@
   },
   "answer": "B",
   "explanation": "Lo snapback del poliestere è favorito dal limitato attrito fra le corde.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 117,
@@ -1635,7 +2179,12 @@
   },
   "answer": "D",
   "explanation": "Sconsiglio il kevlar a chi cerca comfort/protezione (è rigidissimo).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 4
+  }
  },
  {
   "id": 118,
@@ -1649,7 +2198,12 @@
   },
   "answer": "C",
   "explanation": "Weaving one-ahead = weaving della corda successiva a quella in trazione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 119,
@@ -1663,7 +2217,12 @@
   },
   "answer": "C",
   "explanation": "Pre-stretch 10% (con -10% tensione): funzione di assestamento/rodaggio.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 120,
@@ -1677,7 +2236,12 @@
   },
   "answer": "A",
   "explanation": "Eccesso di pre-stretch: ammorbidisce e accorcia la vita rendendola più delicata.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 121,
@@ -1691,7 +2255,12 @@
   },
   "answer": "D",
   "explanation": "Taratura a cadenza regolare in relazione a uso/temperatura/spostamenti.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 122,
@@ -1705,7 +2274,12 @@
   },
   "answer": "D",
   "explanation": "Più importante: la combinazione che consente la massima velocità di movimento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 123,
@@ -1719,7 +2293,12 @@
   },
   "answer": "A",
   "explanation": "Lo snapback del poliestere è sfavorito dall'elevato attrito fra le corde.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 124,
@@ -1733,7 +2312,8 @@
   },
   "answer": "C",
   "explanation": "Primo grande customizzatore storico: Warren Bosworth.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 125,
@@ -1747,7 +2327,12 @@
   },
   "answer": "B",
   "explanation": "Widebody = aumento della rigidità tramite aumento del profilo-spessore.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 126,
@@ -1761,7 +2346,12 @@
   },
   "answer": "D",
   "explanation": "Macchina migliore: elettronica a trazione lineare.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 15
+  }
  },
  {
   "id": 127,
@@ -1775,7 +2365,12 @@
   },
   "answer": "D",
   "explanation": "Trazionando 2 corde alla volta si perde tensione >2kg.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 128,
@@ -1789,7 +2384,12 @@
   },
   "answer": "D",
   "explanation": "Attenzione a un eventuale eccessivo schiacciamento del filamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 129,
@@ -1803,7 +2403,12 @@
   },
   "answer": "A",
   "explanation": "La drop-weight (bilanciere) è constant-pull (il peso tira di continuo).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 15
+  }
  },
  {
   "id": 130,
@@ -1817,7 +2422,12 @@
   },
   "answer": "C",
   "explanation": "La tensione elevata favorisce il controllo.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 131,
@@ -1831,7 +2441,12 @@
   },
   "answer": "A",
   "explanation": "Corde non allineate -> perdita di tensione >5%.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 132,
@@ -1845,7 +2460,12 @@
   },
   "answer": "D",
   "explanation": "Carbonio alto modulo e leggero = molto rigido, vibrazioni elevate.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 133,
@@ -1859,7 +2479,8 @@
   },
   "answer": "D",
   "explanation": "La palla standard (più dura) trasmette maggiore shock.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 134,
@@ -1873,7 +2494,12 @@
   },
   "answer": "A",
   "explanation": "Minore shock: orange (0,65kg/mm, la meno rigida).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 135,
@@ -1887,7 +2513,12 @@
   },
   "answer": "C",
   "explanation": "Maggiore shock: standard (1,30kg/mm, la più rigida).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 136,
@@ -1901,7 +2532,12 @@
   },
   "answer": "D",
   "explanation": "Starting clamp posizionata a contatto con pinza/telaio/pad (no luce).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 137,
@@ -1915,7 +2551,12 @@
   },
   "answer": "B",
   "explanation": "La tensione bassa favorisce la potenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 138,
@@ -1929,7 +2570,12 @@
   },
   "answer": "B",
   "explanation": "Starting clamp con il minimo angolo possibile rispetto al telaio.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 139,
@@ -1943,7 +2589,12 @@
   },
   "answer": "B",
   "explanation": "Per tagliare le corde si usa il tronchesino.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 140,
@@ -1957,7 +2608,12 @@
   },
   "answer": "A",
   "explanation": "In fase di sblocco: apro la pinza e poi sblocco la base.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 43
+  }
  },
  {
   "id": 141,
@@ -1971,7 +2627,12 @@
   },
   "answer": "A",
   "explanation": "La corda più recente è il poliestere - monofilamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 142,
@@ -1985,7 +2646,12 @@
   },
   "answer": "B",
   "explanation": "Top-bottom per minimizzare la deformazione e massimizzare la resa.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 15
+  }
  },
  {
   "id": 143,
@@ -1999,7 +2665,12 @@
   },
   "answer": "D",
   "explanation": "No: le verticali si incordano sempre dal centro, simmetricamente.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 144,
@@ -2013,7 +2684,12 @@
   },
   "answer": "C",
   "explanation": "Massimo comfort: corda a limitata rigidezza, installata a bassa tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 145,
@@ -2027,7 +2703,12 @@
   },
   "answer": "A",
   "explanation": "Kevlar (estremo) a chi cerca massima durabilità meccanica a rottura.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 146,
@@ -2041,7 +2722,12 @@
   },
   "answer": "A",
   "explanation": "Sì, è possibile applicare il pre-stretch a una corda monofilamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 30
+  }
  },
  {
   "id": 147,
@@ -2055,7 +2741,12 @@
   },
   "answer": "A",
   "explanation": "Alto modulo elastico = corda rigida, limitato allungamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 148,
@@ -2069,7 +2760,12 @@
   },
   "answer": "C",
   "explanation": "Comportamento plastico = elevato allungamento e limitato ritorno.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 155
+  }
  },
  {
   "id": 149,
@@ -2083,7 +2779,12 @@
   },
   "answer": "A",
   "explanation": "Sì, la junior si deforma per il peso/massa limitato e la struttura leggera.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 150,
@@ -2097,7 +2798,12 @@
   },
   "answer": "B",
   "explanation": "Limite di buona pratica V-O = circa 2kg (garanzia).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 151,
@@ -2111,7 +2817,12 @@
   },
   "answer": "A",
   "explanation": "Massima potenza: corde a limitata rigidezza, a bassa tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 152,
@@ -2125,7 +2836,12 @@
   },
   "answer": "A",
   "explanation": "Dampener = gommino anti-vibrazioni.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 153,
@@ -2139,7 +2855,12 @@
   },
   "answer": "A",
   "explanation": "Fibra di vetro leggera = molto elastica, vibrazioni a bassa frequenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 154,
@@ -2153,7 +2874,12 @@
   },
   "answer": "D",
   "explanation": "Più difficile col nodo: corda elastica (basso modulo) con elevato ritorno.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 15
+  }
  },
  {
   "id": 155,
@@ -2167,7 +2893,12 @@
   },
   "answer": "C",
   "explanation": "Funzione nodo: tira la corda del nodo a tensione superiore alle altre.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 156,
@@ -2181,7 +2912,12 @@
   },
   "answer": "D",
   "explanation": "La sovratensione nodo limita la perdita di tensione dovuta al nodo.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 157,
@@ -2195,7 +2931,12 @@
   },
   "answer": "D",
   "explanation": "Budello ben montato: bassa rigidezza dinamica e ottima durata dinamica.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 158,
@@ -2209,7 +2950,12 @@
   },
   "answer": "D",
   "explanation": "Massima potenza: budello.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 159,
@@ -2223,7 +2969,12 @@
   },
   "answer": "B",
   "explanation": "Budello montato male: elevato assestamento iniziale e perdita di tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 160,
@@ -2237,7 +2988,12 @@
   },
   "answer": "D",
   "explanation": "Costo di produzione più alto: budello naturale.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 161,
@@ -2251,7 +3007,12 @@
   },
   "answer": "A",
   "explanation": "Mi assicuro che la starting clamp non induca danni al telaio.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 5
+  }
  },
  {
   "id": 162,
@@ -2265,7 +3026,12 @@
   },
   "answer": "B",
   "explanation": "Mono: uscita più nervosa e suono secco -> sensazione di più potenza.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 163,
@@ -2279,7 +3045,12 @@
   },
   "answer": "C",
   "explanation": "La rigidezza del piatto cresce con la tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 164,
@@ -2293,7 +3064,12 @@
   },
   "answer": "B",
   "explanation": "La perdita del nodo si può limitare ma non eliminare del tutto.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 165,
@@ -2307,7 +3083,12 @@
   },
   "answer": "B",
   "explanation": "Massima presa rotazioni: poliestere (snapback).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 166,
@@ -2321,7 +3102,12 @@
   },
   "answer": "A",
   "explanation": "Pre-stretch 20% a 20kg: arriva 20 -> sovratensiona 24 -> ritorna 20.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 167,
@@ -2335,7 +3121,12 @@
   },
   "answer": "C",
   "explanation": "V più alte/O più basse: potenza percepita, rotazioni e comfort (snapback).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 13
+  }
  },
  {
   "id": 168,
@@ -2349,7 +3140,12 @@
   },
   "answer": "D",
   "explanation": "Basso modulo elastico = corda elastica, marcato allungamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 169,
@@ -2363,7 +3159,12 @@
   },
   "answer": "B",
   "explanation": "Più facile col nodo: corda rigida (poca deformazione) con limitato ritorno.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 15
+  }
  },
  {
   "id": 170,
@@ -2377,7 +3178,12 @@
   },
   "answer": "D",
   "explanation": "Comportamento elastico = elevato allungamento ed elevato ritorno.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 155
+  }
  },
  {
   "id": 171,
@@ -2391,7 +3197,12 @@
   },
   "answer": "B",
   "explanation": "Poly allungamento+poco ritorno: morbida iniziale, plastica, calo tensione elevato.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 172,
@@ -2405,7 +3216,12 @@
   },
   "answer": "B",
   "explanation": "Massima presa rotazioni (ibrido): minimizzare gli attriti fra le corde.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 173,
@@ -2419,7 +3235,12 @@
   },
   "answer": "A",
   "explanation": "V più basse/O più alte: maggiore controllo.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 13
+  }
  },
  {
   "id": 174,
@@ -2433,7 +3254,12 @@
   },
   "answer": "D",
   "explanation": "Poly poco allungamento+poco ritorno: scarsa morbidezza, scarso comfort.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 175,
@@ -2447,7 +3273,12 @@
   },
   "answer": "A",
   "explanation": "Poliammide allungamento+ritorno marcati: morbida, marcata elasticità.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 176,
@@ -2461,7 +3292,12 @@
   },
   "answer": "D",
   "explanation": "La corda più antica: budello naturale.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 177,
@@ -2475,7 +3311,12 @@
   },
   "answer": "A",
   "explanation": "Costo di produzione minore: poliestere - monofilamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 178,
@@ -2489,7 +3330,12 @@
   },
   "answer": "D",
   "explanation": "Tempi di produzione più lunghi: budello (circa 14 giorni).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 179,
@@ -2503,7 +3349,12 @@
   },
   "answer": "D",
   "explanation": "Massima presa rotazioni: corda a basso attrito (snapback). [vedi D1]",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 180,
@@ -2517,7 +3368,12 @@
   },
   "answer": "D",
   "explanation": "Profilo 25mm meno rigido di 27mm (profilo maggiore = più rigido).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 181,
@@ -2531,7 +3387,12 @@
   },
   "answer": "A",
   "explanation": "16x19: 19 orizzontali (dispari) -> 1ª e ultima stesso weaving.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 182,
@@ -2545,7 +3406,12 @@
   },
   "answer": "D",
   "explanation": "Setup spin-oriented: NON aiuta il controllo assoluto sulle giocate piatte.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 24
+  }
  },
  {
   "id": 183,
@@ -2559,7 +3425,8 @@
   },
   "answer": "C",
   "explanation": "A 70km/h il carico è ~5500g (a 120km/h ~10kg).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 184,
@@ -2573,7 +3440,8 @@
   },
   "answer": "C",
   "explanation": "Palla green ~47-52g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 185,
@@ -2587,7 +3455,12 @@
   },
   "answer": "B",
   "explanation": "Junior 26\" moderna ~250-270g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 3
+  }
  },
  {
   "id": 186,
@@ -2601,7 +3474,12 @@
   },
   "answer": "B",
   "explanation": "Grommet con verso obbligato: rispetto le indicazioni della casa.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 187,
@@ -2615,7 +3493,12 @@
   },
   "answer": "C",
   "explanation": "Pre-stretch 10% a 20kg: arriva 20 -> sovratensiona 22 -> ritorna 20.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 188,
@@ -2629,7 +3512,8 @@
   },
   "answer": "D",
   "explanation": "Maggiore shock: yellow (restituzione 55%, la più dura).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 189,
@@ -2643,7 +3527,12 @@
   },
   "answer": "C",
   "explanation": "Nodo 10% a 20kg: sovratensiona 22 e NON ritorna (resta sul nodo).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 190,
@@ -2657,7 +3546,12 @@
   },
   "answer": "A",
   "explanation": "Caldo: modulo minore (più morbide), perdono più tensione.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 191,
@@ -2671,7 +3565,12 @@
   },
   "answer": "B",
   "explanation": "Freddo: modulo maggiore (più rigide), perdono minore tensione.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 192,
@@ -2685,7 +3584,8 @@
   },
   "answer": "C",
   "explanation": "Green = depressurizzata ~25% rispetto alla standard.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 193,
@@ -2699,7 +3599,8 @@
   },
   "answer": "B",
   "explanation": "Orange = depressurizzata ~50% rispetto alla standard.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 194,
@@ -2713,7 +3614,12 @@
   },
   "answer": "A",
   "explanation": "Controllo (ibrido): MINIMIZZARE lo spostamento delle corde.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 127
+  }
  },
  {
   "id": 195,
@@ -2727,7 +3633,12 @@
   },
   "answer": "A",
   "explanation": "Racchetta sul piatto: logo del tappo verso l'alto.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 28
+  }
  },
  {
   "id": 196,
@@ -2741,7 +3652,12 @@
   },
   "answer": "C",
   "explanation": "Grommet molto danneggiati: propongo la loro sostituzione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 197,
@@ -2755,7 +3671,12 @@
   },
   "answer": "D",
   "explanation": "Matassa commerciale più diffusa: 200-220m.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 198,
@@ -2769,7 +3690,12 @@
   },
   "answer": "D",
   "explanation": "Il mono nasce in misura preponderante per controllo - spin (snapback).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 199,
@@ -2783,7 +3709,12 @@
   },
   "answer": "A",
   "explanation": "Rigidezza scelta per deformare il filamento e attivarne la risposta.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 200,
@@ -2797,7 +3728,12 @@
   },
   "answer": "B",
   "explanation": "Il budello si propone in set da circa 12-13m.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 201,
@@ -2811,7 +3747,12 @@
   },
   "answer": "A",
   "explanation": "Freddo: le corde perdono MINORE tensione.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 202,
@@ -2825,7 +3766,12 @@
   },
   "answer": "C",
   "explanation": "Ibrido per POTENZA: orizzontale medio-morbida a tensione inferiore alla verticale.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 203,
@@ -2839,7 +3785,12 @@
   },
   "answer": "C",
   "explanation": "Ibrido mono-mono per COMFORT: orizzontale medio-morbida a tensione inferiore.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 204,
@@ -2853,7 +3804,12 @@
   },
   "answer": "D",
   "explanation": "Rigidezza dinamica poliestere ~200-280g/m (alta).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 125
+  }
  },
  {
   "id": 205,
@@ -2867,7 +3823,12 @@
   },
   "answer": "A",
   "explanation": "Creep/fluage = plasticizzazione progressiva sotto carico costante.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 154
+  }
  },
  {
   "id": 206,
@@ -2881,7 +3842,12 @@
   },
   "answer": "A",
   "explanation": "Ibrido controllo: sopra una certa tensione limita lo scorrimento (attrito).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 207,
@@ -2895,7 +3861,12 @@
   },
   "answer": "C",
   "explanation": "Synt-gut vs multi: differenza di struttura (più complessa nel multi).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 208,
@@ -2909,7 +3880,12 @@
   },
   "answer": "B",
   "explanation": "Carbon-fused = combinazione di carbonio e fibra di vetro.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 209,
@@ -2923,7 +3899,12 @@
   },
   "answer": "C",
   "explanation": "Amatoriale con mono 1,30: lo indirizzo verso una corda più morbida/permissiva.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 13
+  }
  },
  {
   "id": 210,
@@ -2937,7 +3918,12 @@
   },
   "answer": "D",
   "explanation": "Si può differenziare liberamente -> 'nessuna delle precedenti'.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 211,
@@ -2951,7 +3937,8 @@
   },
   "answer": "D",
   "explanation": "Palla yellow (standard) ~56-58g.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 212,
@@ -2965,7 +3952,8 @@
   },
   "answer": "A",
   "explanation": "Restituzione red-foam ~35-41%.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 213,
@@ -2979,7 +3967,12 @@
   },
   "answer": "C",
   "explanation": "Pulizia macchina a cadenza regolare per la massima funzionalità.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 214,
@@ -2993,7 +3986,12 @@
   },
   "answer": "B",
   "explanation": "Potenza (ibrido): MASSIMIZZARE lo spostamento delle corde (basso attrito).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 215,
@@ -3007,7 +4005,12 @@
   },
   "answer": "D",
   "explanation": "Umidità crescente: kevlar < poliestere < multi/syntgut < budello.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 216,
@@ -3021,7 +4024,12 @@
   },
   "answer": "B",
   "explanation": "'22-24' = V22/O24: installo 22 verticali e 24 orizzontali (eseguo come richiesto).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 217,
@@ -3035,7 +4043,12 @@
   },
   "answer": "A",
   "explanation": "Differenziare i calibri massimizza lo snapback: potenza e rotazioni.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 218,
@@ -3049,7 +4062,12 @@
   },
   "answer": "C",
   "explanation": "Sì, il budello risente in maniera sensibile dell'umidità.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 219,
@@ -3063,7 +4081,12 @@
   },
   "answer": "B",
   "explanation": "'22-23' = V22/O23: installo 22 verticali e 23 orizzontali.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 220,
@@ -3077,7 +4100,12 @@
   },
   "answer": "C",
   "explanation": "Umidità decrescente: budello > multi/syntgut > poliestere > kevlar.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 221,
@@ -3091,7 +4119,12 @@
   },
   "answer": "A",
   "explanation": "Passacorde larghi = più movimento = maggiore impegno dinamico -> rotture premature.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 222,
@@ -3105,7 +4138,12 @@
   },
   "answer": "A",
   "explanation": "Più lunga (stesso peso) = più potente e stabile, se la si muove bene.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 223,
@@ -3119,7 +4157,12 @@
   },
   "answer": "C",
   "explanation": "La palla disperde la maggior parte dell'energia (isteresi).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 224,
@@ -3133,7 +4176,12 @@
   },
   "answer": "A",
   "explanation": "Sì, si può far scorrere la corda fra i polpastrelli per saggiare l'attrito.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 225,
@@ -3147,7 +4195,12 @@
   },
   "answer": "B",
   "explanation": "Spalla = potenza telaio: racchetta con minore propensione alla spinta.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 226,
@@ -3161,7 +4214,12 @@
   },
   "answer": "A",
   "explanation": "Ibrido sagomato su tondo: per potenza percepita e presa rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 140
+  }
  },
  {
   "id": 227,
@@ -3175,7 +4233,12 @@
   },
   "answer": "A",
   "explanation": "Over che non rompe, comfort+durata: budello naturale.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 4
+  }
  },
  {
   "id": 228,
@@ -3189,7 +4252,12 @@
   },
   "answer": "B",
   "explanation": "Gomito: peso intermedio, corde a bassa rigidezza dinamica, tensioni basse.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 229,
@@ -3203,7 +4271,12 @@
   },
   "answer": "A",
   "explanation": "Profilo 18mm = racchetta morbida-flessibile orientata al controllo/sensibilità.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 230,
@@ -3217,7 +4290,12 @@
   },
   "answer": "D",
   "explanation": "Crescente: legno<acciaio<fibra di vetro<kevlar<carbonio basso modulo<alto modulo.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 122
+  }
  },
  {
   "id": 231,
@@ -3231,7 +4309,12 @@
   },
   "answer": "B",
   "explanation": "Più profondità senza cambiare corda: abbassare la tensione di 1-2kg.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 232,
@@ -3245,7 +4328,12 @@
   },
   "answer": "C",
   "explanation": "Ridurre spostamento multi/syntgut (1ª battuta): assestare manualmente le corde.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 127
+  }
  },
  {
   "id": 233,
@@ -3259,7 +4347,12 @@
   },
   "answer": "A",
   "explanation": "Tempi di produzione più brevi: poliestere - monofilamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 234,
@@ -3273,7 +4366,12 @@
   },
   "answer": "B",
   "explanation": "Basso attrito = favorisce lo spostamento: potenza percepita, comfort, spin.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 235,
@@ -3287,7 +4385,12 @@
   },
   "answer": "A",
   "explanation": "Sì, la junior trasmette più shock per il peso limitato del telaio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 236,
@@ -3301,7 +4404,12 @@
   },
   "answer": "A",
   "explanation": "Maggiore tensione verticali: abbassa l'attrito, incrementa snapback -> rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 237,
@@ -3315,7 +4423,12 @@
   },
   "answer": "D",
   "explanation": "Budello economico: ibrido budello su synthetic gut a tensioni medie.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 238,
@@ -3329,7 +4442,12 @@
   },
   "answer": "A",
   "explanation": "Alto attrito = non favorisce lo spostamento: controllo e compattezza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 239,
@@ -3343,7 +4461,12 @@
   },
   "answer": "A",
   "explanation": "Tensione errata di +2kg: rifaccio l'incordatura (se ho la corda).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 240,
@@ -3357,7 +4480,12 @@
   },
   "answer": "B",
   "explanation": "'22-23' = V22/O23: installo 22 verticali e 23 orizzontali.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 241,
@@ -3371,7 +4499,12 @@
   },
   "answer": "D",
   "explanation": "Spostamento corde multi (1ª soluzione): string-pad nella zona d'impatto.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 242,
@@ -3385,7 +4518,12 @@
   },
   "answer": "A",
   "explanation": "Asciugatura logo: agito in aria e tampono con carta assorbente.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 155
+  }
  },
  {
   "id": 243,
@@ -3399,7 +4537,12 @@
   },
   "answer": "A",
   "explanation": "Telaio XL: 28\" - 71,0cm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 244,
@@ -3413,7 +4556,12 @@
   },
   "answer": "C",
   "explanation": "Sagomata: non determinante in assoluto, ma favorisce la resa nel medio termine.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 245,
@@ -3427,7 +4575,12 @@
   },
   "answer": "D",
   "explanation": "Caldo: cala la rigidezza e aumenta la perdita di tensione.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 246,
@@ -3441,7 +4594,12 @@
   },
   "answer": "C",
   "explanation": "Polso (stabilità): peso intermedio, bilanciamento arretrato, ottima stabilità.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 247,
@@ -3455,7 +4613,12 @@
   },
   "answer": "B",
   "explanation": "Ibrido mono-multi per comfort: tensioni medio-basse (spostamento/dinamica).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 248,
@@ -3469,7 +4632,12 @@
   },
   "answer": "B",
   "explanation": "Racchetta nuova: prima incordatura 2-3kg più bassa per assestare il telaio.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 249,
@@ -3483,7 +4651,12 @@
   },
   "answer": "A",
   "explanation": "Telai anni 70-80: dimensione - aerodinamica - rigidità.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 250,
@@ -3497,7 +4670,12 @@
   },
   "answer": "C",
   "explanation": "Grommet = sistema dei passacorde perimetrali.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 251,
@@ -3511,7 +4689,12 @@
   },
   "answer": "B",
   "explanation": "'22-24' = V più bassa/O più alta -> controllo sulle giocate piatte.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 252,
@@ -3525,7 +4708,12 @@
   },
   "answer": "D",
   "explanation": "Cuore (heart) = zona della gola, parte centrale della racchetta.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 253,
@@ -3539,7 +4727,12 @@
   },
   "answer": "C",
   "explanation": "Problemi al polso -> correlati allo shock da impatto.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 254,
@@ -3553,7 +4746,12 @@
   },
   "answer": "C",
   "explanation": "Racchetta fissata in modo omogeneo, senza forzare/deformare.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 28
+  }
  },
  {
   "id": 255,
@@ -3567,7 +4765,12 @@
   },
   "answer": "C",
   "explanation": "Racchetta posizionata convenzionalmente con il logo verso l'alto.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 256,
@@ -3581,7 +4784,12 @@
   },
   "answer": "D",
   "explanation": "Maggiore tensione verticali (+1/2kg): potenza percepita e rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 257,
@@ -3595,7 +4803,12 @@
   },
   "answer": "D",
   "explanation": "Rigidezza statica poliestere rigido ~0,8-1,2kg/mm.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 133
+  }
  },
  {
   "id": 258,
@@ -3609,7 +4822,12 @@
   },
   "answer": "B",
   "explanation": "16x16: 16 orizzontali (pari) -> 1ª e ultima weaving contrapposto.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 259,
@@ -3623,7 +4841,12 @@
   },
   "answer": "C",
   "explanation": "Diametro maggiore sulla verticale (main grosse) -> aiuta la durata.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 260,
@@ -3637,7 +4860,12 @@
   },
   "answer": "A",
   "explanation": "Nodo 20% a 20kg: sovratensiona 24 e NON ritorna (resta sul nodo).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 261,
@@ -3651,7 +4879,12 @@
   },
   "answer": "A",
   "explanation": "La sagomatura può incidere negativamente sulla sensazione di comfort.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 262,
@@ -3665,7 +4898,12 @@
   },
   "answer": "C",
   "explanation": "V poly 1,20 sottili/O 1,25 grosse: verticali mobili -> potenza percepita e rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 263,
@@ -3679,7 +4917,12 @@
   },
   "answer": "B",
   "explanation": "Racchetta rigida = più potente (il fusto flette meno, disperde meno energia).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 264,
@@ -3693,7 +4936,12 @@
   },
   "answer": "D",
   "explanation": "Junior alluminio leggera: più vibrazioni con la palla più dura (yellow).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 113
+  }
  },
  {
   "id": 265,
@@ -3707,7 +4955,12 @@
   },
   "answer": "C",
   "explanation": "Anche con sistemi anti-vibrazione restano importanti corda e tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 266,
@@ -3721,7 +4974,12 @@
   },
   "answer": "B",
   "explanation": "Corda più tesa = suono più acuto (frequenza maggiore).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 267,
@@ -3735,7 +4993,12 @@
   },
   "answer": "A",
   "explanation": "16x19 ponte 3 archetti a 2 nodi: necessario pattern ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 268,
@@ -3749,7 +5012,12 @@
   },
   "answer": "B",
   "explanation": "Over clamping = ammaccatura della corda da pinzaggio eccessivo.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 269,
@@ -3763,7 +5031,12 @@
   },
   "answer": "D",
   "explanation": "Maggiore tensione orizzontali (+1/2kg): controllo sulle giocate piatte.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 270,
@@ -3777,7 +5050,12 @@
   },
   "answer": "C",
   "explanation": "Calibrazione a ogni spostamento, mese/cadenza regolare, variazione di temperatura.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 45
+  }
  },
  {
   "id": 271,
@@ -3791,7 +5069,12 @@
   },
   "answer": "A",
   "explanation": "Rigidezza statica poliestere super-soft ~0,2-0,4kg/mm.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 133
+  }
  },
  {
   "id": 272,
@@ -3805,7 +5088,12 @@
   },
   "answer": "A",
   "explanation": "Diametro maggiore sulle orizzontali: verticali sottili -> ne favorisce lo spostamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 273,
@@ -3819,7 +5107,12 @@
   },
   "answer": "B",
   "explanation": "11-12 anni in transizione: peso ~275-285g.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 14
+  }
  },
  {
   "id": 274,
@@ -3833,7 +5126,12 @@
   },
   "answer": "A",
   "explanation": "Double-pull = trazione di due corde simultaneamente (da evitare).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 275,
@@ -3847,7 +5145,12 @@
   },
   "answer": "A",
   "explanation": "'24-22' = V più alta -> potenza percepita e presa rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 276,
@@ -3861,7 +5164,12 @@
   },
   "answer": "C",
   "explanation": "Ibrido per CONTROLLO: orizzontale medio-rigida a tensione pari/superiore alla verticale.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 277,
@@ -3875,7 +5183,12 @@
   },
   "answer": "A",
   "explanation": "Sì, la differenziazione delle tensioni può incrementare il comfort.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 278,
@@ -3889,7 +5202,8 @@
   },
   "answer": "B",
   "explanation": "La massa è positiva: elemento stabilizzante -> protezione del braccio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 279,
@@ -3903,7 +5217,12 @@
   },
   "answer": "C",
   "explanation": "Rigidezza statica = rigidezza all'allungamento (carico/deformazione).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 280,
@@ -3917,7 +5236,12 @@
   },
   "answer": "A",
   "explanation": "Materiale del monofilamento: poliestere - co-poliestere.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 281,
@@ -3931,7 +5255,12 @@
   },
   "answer": "A",
   "explanation": "Poliestere: elevate caratteristiche plastiche-duttili, limitate elastiche.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 282,
@@ -3945,7 +5274,12 @@
   },
   "answer": "A",
   "explanation": "Multifilamento: elevato assorbimento shock ed elevata elasticità.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 283,
@@ -3959,7 +5293,12 @@
   },
   "answer": "A",
   "explanation": "Corda più grossa = suono meno acuto (frequenza minore).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 284,
@@ -3973,7 +5312,12 @@
   },
   "answer": "D",
   "explanation": "La sagomatura ha incidenza NON determinante in assoluto sulle rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 285,
@@ -3987,7 +5331,12 @@
   },
   "answer": "A",
   "explanation": "Multi: uscita più progressiva e suono ovattato -> sensazione di minore potenza.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 286,
@@ -4001,7 +5350,12 @@
   },
   "answer": "B",
   "explanation": "Più rigida staticamente: kevlar.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 287,
@@ -4015,7 +5369,12 @@
   },
   "answer": "C",
   "explanation": "Matassina/set di corda: circa 12-13m.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 4
+  }
  },
  {
   "id": 288,
@@ -4029,7 +5388,12 @@
   },
   "answer": "B",
   "explanation": "Materiale del synt-gut: nylon - poliammide.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 289,
@@ -4043,7 +5407,12 @@
   },
   "answer": "C",
   "explanation": "Comfort economico: synthetic-gut 1,25-1,30mm a bassa tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 4
+  }
  },
  {
   "id": 290,
@@ -4057,7 +5426,12 @@
   },
   "answer": "A",
   "explanation": "'23-22' = V23/O22: installo 23 verticali e 22 orizzontali.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 291,
@@ -4071,7 +5445,12 @@
   },
   "answer": "A",
   "explanation": "Diametro maggiore = gauge minore: il 15.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 292,
@@ -4085,7 +5464,12 @@
   },
   "answer": "B",
   "explanation": "Diametro maggiore sulle orizzontali: verticali sottili mobili -> potenza/rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 293,
@@ -4099,7 +5483,12 @@
   },
   "answer": "C",
   "explanation": "Tipi di perdita: statica e dinamica.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 294,
@@ -4113,7 +5502,12 @@
   },
   "answer": "C",
   "explanation": "Perdita statica: meteo + materiale + tecnica di incordatura.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 295,
@@ -4127,7 +5521,12 @@
   },
   "answer": "D",
   "explanation": "Perdita dinamica: meteo + materiale + tecnica + intensità di gioco/sollecitazioni.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 296,
@@ -4141,7 +5540,12 @@
   },
   "answer": "A",
   "explanation": "Caldo (35-40°C): si tende a salire di tensione 1-2kg (compenso l'ammorbidimento).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 297,
@@ -4155,7 +5559,12 @@
   },
   "answer": "B",
   "explanation": "Freddo (0-5°C): si tende a scendere di tensione 1-2kg (compenso l'irrigidimento).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 298,
@@ -4169,7 +5578,12 @@
   },
   "answer": "A",
   "explanation": "La rigidezza della pallina può influire su mano-polso-gomito.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 299,
@@ -4183,7 +5597,12 @@
   },
   "answer": "D",
   "explanation": "Incordo 1-2 telai a tensioni differenti di 1-2kg, testo, poi decido.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 300,
@@ -4197,7 +5616,12 @@
   },
   "answer": "B",
   "explanation": "Rottura ripetuta sul passacorde: controllo i grommet e verifico che non incidano.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 301,
@@ -4211,7 +5635,12 @@
   },
   "answer": "D",
   "explanation": "Errore con la starting clamp: può causare rottura precoce se schiaccia/in punti sensibili.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 302,
@@ -4225,7 +5654,12 @@
   },
   "answer": "D",
   "explanation": "PAD protegge il telaio, SPACER sposta il contatto: entrambi nel kit (tutte corrette).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 303,
@@ -4239,7 +5673,12 @@
   },
   "answer": "B",
   "explanation": "Tutte le corde risentono della temperatura: col caldo cala la rigidezza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 304,
@@ -4253,7 +5692,12 @@
   },
   "answer": "D",
   "explanation": "Diablo: o sempre o mai, con logica procedurale per la massima consistenza.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 10
+  }
  },
  {
   "id": 305,
@@ -4267,7 +5711,12 @@
   },
   "answer": "B",
   "explanation": "Trap-door = finestrella apribile sul tappo della racchetta.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 9
+  }
  },
  {
   "id": 306,
@@ -4281,7 +5730,8 @@
   },
   "answer": "A",
   "explanation": "Epitrocleite ('golf elbow') -> dritto e servizio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": null
  },
  {
   "id": 307,
@@ -4295,7 +5745,12 @@
   },
   "answer": "B",
   "explanation": "Progressione corde: multi/syntgut -> ibrido -> mono soft -> mono.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  },
  {
   "id": 308,
@@ -4309,7 +5764,12 @@
   },
   "answer": "C",
   "explanation": "Sagomato su tondo: maggiore rigidezza verticale, minimi attriti -> snapback.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 309,
@@ -4323,7 +5783,12 @@
   },
   "answer": "B",
   "explanation": "320g meno stabile di 330g (più massa = più stabilità).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 310,
@@ -4337,7 +5802,12 @@
   },
   "answer": "A",
   "explanation": "14x16 ponte 3 archetti a 2 nodi: necessario pattern ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 311,
@@ -4351,7 +5821,12 @@
   },
   "answer": "C",
   "explanation": "Telaio con scarso comfort: multi/syntgut/poliestere soft (corde morbide).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 44
+  }
  },
  {
   "id": 312,
@@ -4365,7 +5840,12 @@
   },
   "answer": "C",
   "explanation": "Mis-pattern = errore di esecuzione del pattern.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 10
+  }
  },
  {
   "id": 313,
@@ -4379,7 +5859,12 @@
   },
   "answer": "D",
   "explanation": "Fretta: il più rapido possibile NEL RISPETTO delle procedure (mai 2+ corde insieme).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 314,
@@ -4393,7 +5878,12 @@
   },
   "answer": "A",
   "explanation": "Racchetta sul piatto: logo verso l'alto.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 315,
@@ -4407,7 +5897,12 @@
   },
   "answer": "B",
   "explanation": "No: il 2 nodi non consente di differenziare le tensioni in modo logico.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 316,
@@ -4421,7 +5916,12 @@
   },
   "answer": "B",
   "explanation": "Racchetta simmetrica rispetto al centro, controllando torri e braccetti.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 28
+  }
  },
  {
   "id": 317,
@@ -4435,7 +5935,12 @@
   },
   "answer": "B",
   "explanation": "Due telai per le ore successive: parti dalla più tesa (più tempo per assestarsi).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 318,
@@ -4449,7 +5954,12 @@
   },
   "answer": "B",
   "explanation": "Ibrido mono-multi su junior: tensioni medio-basse (16-18-20kg) per minimo shock.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 319,
@@ -4463,7 +5973,12 @@
   },
   "answer": "A",
   "explanation": "Manico L2 (4 1/4\") = ~10,7cm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 320,
@@ -4477,7 +5992,12 @@
   },
   "answer": "D",
   "explanation": "'22-24' è incordabile (tensioni differenziate possibili) -> nessuna delle precedenti.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 321,
@@ -4491,7 +6011,12 @@
   },
   "answer": "D",
   "explanation": "Sì, il suono all'impatto incide sulla percezione della potenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 103
+  }
  },
  {
   "id": 322,
@@ -4505,7 +6030,12 @@
   },
   "answer": "B",
   "explanation": "V poly più spesse/O più sottili: main grosse -> maggiore durata.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 323,
@@ -4519,7 +6049,12 @@
   },
   "answer": "B",
   "explanation": "Ibrido: corde scelte in base all'obiettivo (potenza vs controllo).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 324,
@@ -4533,7 +6068,12 @@
   },
   "answer": "C",
   "explanation": "String-savers = piccoli pad fra le corde per limitare lo spostamento/allungare la vita.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 15
+  }
  },
  {
   "id": 325,
@@ -4547,7 +6087,12 @@
   },
   "answer": "A",
   "explanation": "String savers: limitano lo spostamento nelle incordature syntgut/multifilamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 127
+  }
  },
  {
   "id": 326,
@@ -4561,7 +6106,12 @@
   },
   "answer": "B",
   "explanation": "Caldo: le corde perdono MAGGIORE tensione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 327,
@@ -4575,7 +6125,12 @@
   },
   "answer": "C",
   "explanation": "Ultimo junior prima dello standard: 26\" - 66,1cm.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 328,
@@ -4589,7 +6144,12 @@
   },
   "answer": "B",
   "explanation": "Richiesta 26kg: chiedo informazioni e capisco il livello prima di rispondere.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 329,
@@ -4603,7 +6163,12 @@
   },
   "answer": "C",
   "explanation": "Ghosting = sbiancatura/segno della corda multifilamento dovuto alla presa della pinza.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 330,
@@ -4617,7 +6182,12 @@
   },
   "answer": "C",
   "explanation": "La meno comfortevole: kevlar.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 331,
@@ -4631,7 +6201,12 @@
   },
   "answer": "B",
   "explanation": "Tensione scelta per deformare il filamento e attivarne la risposta.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 102
+  }
  },
  {
   "id": 332,
@@ -4645,7 +6220,12 @@
   },
   "answer": "D",
   "explanation": "Racchetta flessibile = meno potente (il fusto flette e disperde energia).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 8
+  }
  },
  {
   "id": 333,
@@ -4659,7 +6239,12 @@
   },
   "answer": "B",
   "explanation": "Diametro maggiore sulle orizzontali: verticali sottili mobili -> potenza/rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 334,
@@ -4673,7 +6258,12 @@
   },
   "answer": "A",
   "explanation": "Problemi alla spalla -> correlati alla generazione di potenza.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 335,
@@ -4687,7 +6277,12 @@
   },
   "answer": "C",
   "explanation": "Gauge 16 ~1,27-1,32mm (più grosso del 17 e del 18).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 3
+  }
  },
  {
   "id": 336,
@@ -4701,7 +6296,12 @@
   },
   "answer": "B",
   "explanation": "Manico L3 (4 3/8\") = ~11,0cm.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 11
+  }
  },
  {
   "id": 337,
@@ -4715,7 +6315,12 @@
   },
   "answer": "C",
   "explanation": "Ibrido per ROTAZIONI: orizzontale a tensione inferiore alla verticale (V più tese -> snapback).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 338,
@@ -4729,7 +6334,12 @@
   },
   "answer": "A",
   "explanation": "Maggiore tensione verticali: massimizza lo snapback -> potenza e rotazioni.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 32
+  }
  },
  {
   "id": 339,
@@ -4743,7 +6353,12 @@
   },
   "answer": "C",
   "explanation": "Cliente durante l'incordatura: chiedo se può attendere il completamento del telaio.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 28
+  }
  },
  {
   "id": 340,
@@ -4757,7 +6372,12 @@
   },
   "answer": "A",
   "explanation": "Rigidezza dinamica budello ~80-120g/m (bassa).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 118
+  }
  },
  {
   "id": 341,
@@ -4771,7 +6391,12 @@
   },
   "answer": "B",
   "explanation": "Crepatura: rimuovo le corde (tolgo la tensione pericolosa) e avverto il cliente.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 342,
@@ -4785,7 +6410,12 @@
   },
   "answer": "C",
   "explanation": "Pattern molto largo = favorisce il topspin (maggiore entrata della palla).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 15
+  }
  },
  {
   "id": 343,
@@ -4799,7 +6429,12 @@
   },
   "answer": "A",
   "explanation": "Sì, è possibile applicare il pre-stretch a una corda multifilamento.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 30
+  }
  },
  {
   "id": 344,
@@ -4813,7 +6448,12 @@
   },
   "answer": "A",
   "explanation": "Tensione scelta su capacità tecniche/fisiche, attrezzo e corda (attivazione della corda).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 153
+  }
  },
  {
   "id": 345,
@@ -4827,7 +6467,8 @@
   },
   "answer": "D",
   "explanation": "Maggiore shock: yellow no-pressure/piena (la più rigida).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": null
  },
  {
   "id": 346,
@@ -4841,7 +6482,12 @@
   },
   "answer": "B",
   "explanation": "Tondo su sagomato: l'orizzontale sagomata trattiene -> NON favorisce lo spostamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 347,
@@ -4855,7 +6501,12 @@
   },
   "answer": "C",
   "explanation": "Weaving one-ahead = passaggio della corda successiva a quella in trazione.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 28
+  }
  },
  {
   "id": 348,
@@ -4869,7 +6520,12 @@
   },
   "answer": "C",
   "explanation": "Gomito: corde nylon-poliammide-poliuretano (multifilamento, morbide).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 121
+  }
  },
  {
   "id": 349,
@@ -4883,7 +6539,12 @@
   },
   "answer": "C",
   "explanation": "Più potente fra queste (max rilascio energia): multifilamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 101
+  }
  },
  {
   "id": 350,
@@ -4897,7 +6558,12 @@
   },
   "answer": "B",
   "explanation": "95\"/22mm 18x20 (più fitto) vs 16x18: meno potente, maggiore controllo.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 351,
@@ -4911,7 +6577,12 @@
   },
   "answer": "A",
   "explanation": "18x20 ponte 3 archetti a 2 nodi: necessario pattern ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 352,
@@ -4925,7 +6596,12 @@
   },
   "answer": "C",
   "explanation": "Sì, il telaio si deforma in modo apprezzabile e con esso varia la tensione.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 45
+  }
  },
  {
   "id": 353,
@@ -4939,7 +6615,12 @@
   },
   "answer": "B",
   "explanation": "18x20 ponte 4 archetti a 2 nodi: NON necessario pattern ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 43
+  }
  },
  {
   "id": 354,
@@ -4953,7 +6634,12 @@
   },
   "answer": "A",
   "explanation": "Sì, il budello ha un suono più morbido/sordo rispetto al multifilamento.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 33
+  }
  },
  {
   "id": 355,
@@ -4967,7 +6653,12 @@
   },
   "answer": "B",
   "explanation": "Verticali dal centro per minimizzare la deformazione e massimizzare la resa.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 356,
@@ -4981,7 +6672,12 @@
   },
   "answer": "A",
   "explanation": "Più soggetti a deformazione: i telai flessibili e sottili.",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 73
+  }
  },
  {
   "id": 357,
@@ -4995,7 +6691,12 @@
   },
   "answer": "A",
   "explanation": "Rigidezza dinamica = rigidezza all'impatto (sollecitazione veloce).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 119
+  }
  },
  {
   "id": 358,
@@ -5009,7 +6710,12 @@
   },
   "answer": "A",
   "explanation": "Sì, è possibile incordare una junior con tecnica ATW.",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "3_procedure.pdf",
+   "label": "Procedure",
+   "page": 25
+  }
  },
  {
   "id": 359,
@@ -5023,7 +6729,12 @@
   },
   "answer": "A",
   "explanation": "Diablo = elemento che riduce l'angolo di trazione (allinea con la cella di carico).",
-  "confidence": "Alta"
+  "confidence": "Alta",
+  "ref": {
+   "pdf": "2_macchine+attrezzature.pdf",
+   "label": "Macchine & attrezzature",
+   "page": 13
+  }
  },
  {
   "id": 360,
@@ -5037,6 +6748,11 @@
   },
   "answer": "C",
   "explanation": "Calo di tensione dopo 5 minuti: circa 15-20% (perdita statica).",
-  "confidence": "Media"
+  "confidence": "Media",
+  "ref": {
+   "pdf": "1_fisica attrezzi.pdf",
+   "label": "Fisica & attrezzi",
+   "page": 131
+  }
  }
 ]
