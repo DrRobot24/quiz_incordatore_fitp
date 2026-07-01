@@ -77,7 +77,7 @@
   function setSyncStatus(msg, kind){
     const el = $("#sync-status");
     if(!el) return;
-    el.textContent = msg || "";
+    el.innerHTML = msg || "";
     el.className = "muted sync-status" + (kind ? " " + kind : "");
   }
 
@@ -159,12 +159,27 @@
         stats = mergeStats(stats, res.data);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
         renderStats();
+        renderSyncBadge();
         setSyncStatus("✅ Progressi caricati e uniti.", "ok");
         cloudPush(code, true);
       })
       .catch(err => {
         setSyncStatus("⚠️ Errore nel caricamento dal cloud.", "ko");
       });
+  }
+
+  // Riga di stato discreta nel setup: mostra se c'è un codice sync attivo.
+  function renderSyncBadge(){
+    const el = $("#sync-badge");
+    if(!el) return;
+    const code = getSyncCode();
+    if(isValidCode(code)){
+      el.className = "sync-badge active";
+      el.innerHTML = `<span class="dot"></span>☁️ Sincronizzato · <b>${code}</b> <span class="muted">— i progressi si salvano nel cloud</span>`;
+    } else {
+      el.className = "sync-badge";
+      el.innerHTML = `<span class="dot"></span>💾 Solo su questo dispositivo <span class="muted">— aggiungi un codice sync dalla schermata iniziale per salvarli nel cloud</span>`;
+    }
   }
 
   function init(){
@@ -175,6 +190,7 @@
         buildTopicsList();
         renderStats();
         bindEvents();
+        renderSyncBadge();
       })
       .catch(err => {
         $("#topics-list").innerHTML = "<p class='muted'>Impossibile caricare data.json. Se hai aperto il file direttamente nel browser, avvia un piccolo server locale (vedi README) oppure pubblica su GitHub Pages.</p>";
@@ -253,7 +269,7 @@
       launchQuiz(wrongQuestions, quiz.timed, quiz.timeLimitSec);
     });
 
-    // ---- Sync ----
+    // ---- Sync (nella welcome) ----
     const codeInput = $("#sync-code");
     if(codeInput){
       const saved = getSyncCode();
@@ -262,6 +278,7 @@
         const v = codeInput.value.trim().toLowerCase();
         codeInput.value = v;
         if(isValidCode(v)){ setSyncCode(v); setSyncStatus(""); }
+        renderSyncBadge();
       });
     }
     const genBtn = $("#btn-sync-generate");
@@ -269,13 +286,8 @@
       const code = generateCode();
       $("#sync-code").value = code;
       setSyncCode(code);
-      setSyncStatus("Codice generato. Salvalo sul cloud e riusalo sugli altri dispositivi.", "ok");
-    });
-    const saveBtn = $("#btn-sync-save");
-    if(saveBtn) saveBtn.addEventListener("click", () => {
-      const code = $("#sync-code").value.trim().toLowerCase();
-      setSyncCode(code);
-      cloudPush(code, false);
+      renderSyncBadge();
+      setSyncStatus("Codice generato e salvato: <b>" + code + "</b>. Conservalo! I progressi ora si sincronizzano automaticamente.", "ok");
     });
     const loadBtn = $("#btn-sync-load");
     if(loadBtn) loadBtn.addEventListener("click", () => {

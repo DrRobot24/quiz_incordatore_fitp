@@ -446,10 +446,61 @@ footer a{ color: var(--ball); text-decoration: none; font-weight: 700; }
 footer a:hover{ text-decoration: underline; }
 
 /* --- Sync cloud --- */
-#sync-card #sync-code{ font-family: var(--font-mono); }
 .sync-status{ margin-top:.6rem; min-height:1.1em; }
 .sync-status.ok{ color: var(--ball-dark); font-weight:600; }
 .sync-status.ko{ color: var(--clay-dark); font-weight:600; }
+
+/* Sync nella welcome */
+.welcome-sync{
+  text-align:left;
+  background: linear-gradient(180deg, #F4F7EE, #EEF3E2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin: 0 0 1.2rem;
+}
+.welcome-sync-label{
+  display:block;
+  font-family: var(--font-display);
+  text-transform:uppercase; letter-spacing:.03em;
+  font-size:.85rem; color: var(--court);
+  margin-bottom:.5rem;
+}
+.welcome-sync-row{ display:flex; gap:.5rem; }
+.welcome-sync-row input{
+  flex:1 1 auto; min-width:0;
+  font-family: var(--font-mono);
+}
+.welcome-sync-row button{ flex:0 0 auto; }
+.welcome-sync-hint{ font-size:.8rem; margin:.6rem 0 0; }
+
+.welcome-actions{
+  display:flex; gap:.7rem; justify-content:center; align-items:center; flex-wrap:wrap;
+}
+
+/* Riga di stato sync nel setup */
+.sync-badge{
+  display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+  font-size:.82rem;
+  color: rgba(255,255,255,.92);
+  background: rgba(11,30,22,.4);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px;
+  padding:.6rem .9rem;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.sync-badge .muted{ color: rgba(255,255,255,.7); }
+.sync-badge b{ font-family: var(--font-mono); color: var(--ball); }
+.sync-badge .dot{
+  width:9px; height:9px; border-radius:50%; flex:0 0 auto;
+  background: #C9C2AC;
+  box-shadow: 0 0 0 3px rgba(201,194,172,.25);
+}
+.sync-badge.active .dot{
+  background: var(--ball);
+  box-shadow: 0 0 0 3px rgba(207,224,72,.3);
+}
 
 /* --- Header logo (campo stilizzato) --- */
 header.top .brand-group{ display:flex; align-items:center; gap:.7rem; }
@@ -534,4 +585,6 @@ body:has(#screen-welcome.active) #app-header{ display:none; }
   header.top .brand-logo{ width:2rem; height:2rem; }
   .welcome-media{ aspect-ratio: 16 / 10; }
   .welcome-body{ padding: 1.3rem 1.1rem 1.6rem; }
+  .welcome-actions{ flex-direction:column-reverse; align-items:stretch; }
+  .welcome-actions button{ width:100%; }
 }
