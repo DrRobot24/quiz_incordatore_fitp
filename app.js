@@ -151,7 +151,7 @@
   }
 
   function init(){
-    fetch("data.json?v=6")
+    fetch("data.json?v=8")
       .then(r => r.json())
       .then(data => {
         ALL_QUESTIONS = data;
@@ -423,9 +423,11 @@
     if(!ref || !ref.pdf){
       return `<div class="ref ref-none">📖 Argomento trasversale — rivedi le dispense generali.</div>`;
     }
-    const url = "public/" + encodeURIComponent(ref.pdf) + "#page=" + ref.page;
+    const hasPage = Number.isInteger(ref.page);
+    const url = "public/" + encodeURIComponent(ref.pdf) + (hasPage ? "#page=" + ref.page : "");
+    const pageLabel = hasPage ? ` · pag. <b>${ref.page}</b>` : "";
     return `<a class="ref" href="${url}" target="_blank" rel="noopener">
-      📖 Dispensa: <b>${ref.label}</b> · pag. <b>${ref.page}</b> <span class="ref-open">apri ↗</span>
+      📖 Dispensa: <b>${ref.label}</b>${pageLabel} <span class="ref-open">apri ↗</span>
     </a>`;
   }
 
