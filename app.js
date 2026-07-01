@@ -48,7 +48,7 @@
   }
 
   function init(){
-    fetch("data.json?v=4")
+    fetch("data.json?v=6")
       .then(r => r.json())
       .then(data => {
         ALL_QUESTIONS = data;
@@ -253,6 +253,8 @@
     topicEl.textContent = TOPIC_SHORT[q.topic] || q.topic;
     topicEl.className = "topic-tag conf-" + q.confidence;
 
+    $("#q-id").textContent = "N° " + q.id;
+
     $("#q-text").textContent = q.question;
 
     const optsContainer = $("#q-options");
@@ -306,9 +308,10 @@
     });
 
     const fb = $("#q-feedback");
+    const whyLabel = correct ? "Perché è corretta" : "Perché hai sbagliato";
     fb.innerHTML = `<div class="feedback ${correct?"ok":"ko"}">
       <span class="label">${correct ? "Esatto" : "Risposta errata · corretta: " + q.answer}</span>
-      ${q.explanation}
+      <div class="why"><span class="why-tag">${whyLabel}</span>${q.explanation}</div>
       ${(!correct) ? refHtml(q.ref) : ""}
     </div>`;
 
@@ -376,7 +379,7 @@
       retryBtn.style.display = "inline-block";
       $("#wrong-list").innerHTML = wrongs.map(a => `
         <div class="wrong-item">
-          <div class="q">${a.question.question}</div>
+          <div class="q"><span class="q-num">N° ${a.question.id}</span>${a.question.question}</div>
           <div class="a">Hai risposto <b>${a.given}</b> · corretta <b>${a.question.answer}</b> — ${a.question.explanation}</div>
           ${refHtml(a.question.ref)}
         </div>
