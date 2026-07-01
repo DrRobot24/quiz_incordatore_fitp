@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Super String 1.0 · Quiz incordatore FITP</title>
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 <div class="wrap">
@@ -33,6 +33,8 @@
         <p class="welcome-sub">La palestra di domande per l'esame ufficiale da <b>incordatore</b>. 360 domande, dispense collegate, progressi che ti seguono ovunque.</p>
         <p class="motto welcome-motto">💪 Ogni errore è un colpo che impari a rispondere. 🔥 Allenati, insisti, non mollare. 🏆</p>
 
+        <button id="btn-enter" type="button" class="btn-enter btn-enter-main">Entra in campo 🎾</button>
+
         <div class="welcome-sync">
           <label class="welcome-sync-label" for="sync-code">☁️ Codice sync <span class="muted">(facoltativo)</span></label>
           <div class="welcome-sync-row">
@@ -40,13 +42,10 @@
             <button class="ghost small" id="btn-sync-generate" type="button">Genera</button>
           </div>
           <p class="muted welcome-sync-hint">Hai già un codice? Inseriscilo e carica i tuoi progressi. Non ce l'hai? Genera il tuo codice e conservalo: è la chiave per ritrovare i dati su ogni dispositivo.</p>
+          <button class="ghost btn-load-full" id="btn-sync-load" type="button">⬇️ Carica progressi</button>
           <p class="muted sync-status" id="sync-status"></p>
         </div>
 
-        <div class="welcome-actions">
-          <button class="ghost" id="btn-sync-load" type="button">⬇️ Carica progressi</button>
-          <button id="btn-enter" type="button" class="btn-enter">Entra in campo 🎾</button>
-        </div>
         <p class="welcome-foot muted">Nessun account · nessun backend · i tuoi dati restano tuoi.</p>
       </div>
     </div>
