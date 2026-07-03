@@ -237,7 +237,7 @@
   }
 
   function init(){
-    fetch("data.json?v=14")
+    fetch("data.json?v=15")
       .then(r => r.json())
       .then(data => {
         ALL_QUESTIONS = normalizeQuestions(data);
