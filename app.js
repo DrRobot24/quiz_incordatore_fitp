@@ -217,11 +217,30 @@
     }
   }
 
+  // Normalizza il formato della banca domande verso le chiavi usate dal
+  // motore (id/topic/options/answer/explanation/confidence). Supporta il
+  // nuovo formato { meta, domande } con campi italiani e, per retrocompat,
+  // il vecchio array con campi inglesi.
+  function normalizeQuestions(data){
+    const list = Array.isArray(data) ? data : (data && Array.isArray(data.domande) ? data.domande : []);
+    return list.map(q => ({
+      id: q.id != null ? q.id : q.n,
+      topic: q.topic != null ? q.topic : q.argomento,
+      question: q.question != null ? q.question : q.domanda,
+      options: q.options != null ? q.options : q.opzioni,
+      answer: q.answer != null ? q.answer : q.risposta,
+      explanation: q.explanation != null ? q.explanation : q.motivazione,
+      confidence: q.confidence != null ? q.confidence : q.confidenza,
+      ref: q.ref || null,
+      stato: q.stato != null ? q.stato : null
+    }));
+  }
+
   function init(){
-    fetch("data.json?v=8")
+    fetch("data.json?v=14")
       .then(r => r.json())
       .then(data => {
-        ALL_QUESTIONS = data;
+        ALL_QUESTIONS = normalizeQuestions(data);
         buildTopicsList();
         renderStats();
         bindEvents();
