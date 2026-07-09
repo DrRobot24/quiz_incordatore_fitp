@@ -21,6 +21,42 @@ function isValidCode(code) {
   return typeof code === "string" && code.length >= 4 && code.length <= 60 && CODE_RE.test(code);
 }
 
+// Ripulisce il payload progressi accettando solo la forma attesa e tipi
+// primitivi coercizzati. I dati sono indicizzati da un codice sync condiviso
+// in chiaro: chiunque conosca il codice puo' scrivere, quindi non fidarsi mai
+// del contenuto (difesa contro XSS stored / payload malevoli).
+function sanitizeProgress(data) {
+  const out = { perQuestion: {}, history: [] };
+  const pq = data.perQuestion;
+  if (pq && typeof pq === "object") {
+    for (const id of Object.keys(pq)) {
+      if (!/^\d+$/.test(id)) continue; // gli id domanda sono numerici
+      const e = pq[id];
+      if (!e || typeof e !== "object") continue;
+      out.perQuestion[id] = {
+        seen: Math.max(0, Number(e.seen) || 0),
+        wrong: Math.max(0, Number(e.wrong) || 0),
+      };
+    }
+  }
+  const hist = Array.isArray(data.history) ? data.history : [];
+  for (const h of hist.slice(0, 200)) {
+    if (!h || typeof h !== "object") continue;
+    const ids = Array.isArray(h.ids)
+      ? h.ids.map((x) => parseInt(x, 10)).filter(Number.isInteger).slice(0, 400)
+      : [];
+    out.history.push({
+      date: typeof h.date === "string" ? h.date.slice(0, 40) : "",
+      score: Number(h.score) || 0,
+      total: Number(h.total) || 0,
+      ids,
+      timed: !!h.timed,
+      timeLimitSec: Number(h.timeLimitSec) || 0,
+    });
+  }
+  return out;
+}
+
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
 
@@ -41,14 +77,16 @@ export default async function handler(req, res) {
       if (!isValidCode(code)) {
         return res.status(400).json({ error: "codice non valido" });
       }
-      const data = body.data;
-      if (data === undefined || data === null || typeof data !== "object") {
+      const rawData = body.data;
+      if (rawData === undefined || rawData === null || typeof rawData !== "object") {
         return res.status(400).json({ error: "dati mancanti" });
       }
-      const serialized = JSON.stringify(data);
+      const serialized = JSON.stringify(rawData);
       if (serialized.length > MAX_BODY_BYTES) {
         return res.status(413).json({ error: "dati troppo grandi" });
       }
+      // Normalizza a forma/tipi attesi prima di persistere.
+      const data = sanitizeProgress(rawData);
       await redis.set(keyFor(code), data, { ex: TTL_SECONDS });
       return res.status(200).json({ ok: true, code });
     }

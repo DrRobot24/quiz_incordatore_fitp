@@ -2,19 +2,8 @@
   "meta": {
     "titolo": "Esame Incordatore FITP - Banca Domande",
     "totale": 360,
-    "aggiornato": "2026-07-03",
-    "fonte": "Risposte SESSIONE ESAME 2025 (gruppo di lavoro) come verità di riferimento; base Esame_Incordatore_FIT_360 + verifica manuali corso",
-    "stato_confidenza": {
-      "Alta_definitive": 355,
-      "Media_da_discutere": 5,
-      "domande_da_discutere": [
-        10,
-        55,
-        200,
-        253,
-        334
-      ]
-    }
+    "aggiornato": "2026-07-09",
+    "fonte": "Esame_Incordatore_FIT_360_RISPOSTE.xlsx (verifica su manuali corso pro-t-one) + domande_sessione_fixed_2026_.xlsx (sessione di studio in presenza, 27 risposte aggiornate)"
   },
   "domande": [
     {
@@ -43,8 +32,8 @@
         "D": "possiedono un modulo elastico crescente-calante-crescente"
       },
       "risposta": "C",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: C; elaborazione precedente: A] Il poliestere ha modulo elastico che CALA con l'aumentare del carico.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -102,9 +91,9 @@
         "C": "non possiamo tendere le corde verticali più di 2kg rispetto alle corde orizzontali",
         "D": "nessuna delle precedenti"
       },
-      "risposta": "D",
-      "motivazione": "Nessun vincolo assoluto: le tensioni V/O si possono differenziare. [Verificato: coerente con la catena fisica confermata su differenziazione tensioni] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "C",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -162,10 +151,10 @@
         "C": "si a patto di differenziare alzando la tensione delle verticali",
         "D": "si a patto di differenziare alzando la tensione delle orizzontali"
       },
-      "risposta": "A",
-      "motivazione": "[DA DISCUTERE — voto gruppo 2025 diviso tra A e D] Sì, differenziare le tensioni gestisce la deformazione differenziale. [Verificato: coerente con la catena fisica confermata su differenziazione tensioni]",
+      "risposta": "D",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
       "confidenza": "Media",
-      "stato": "Da discutere"
+      "stato": "Risolta"
     },
     {
       "n": 11,
@@ -388,8 +377,8 @@
         "D": "budello naturale - natural gut"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Dopo il budello comparve per prima la sintetica nylon/synthetic-gut.",
-      "confidenza": "Alta",
+      "motivazione": "Dopo il budello comparve per prima la sintetica nylon/synthetic-gut.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -433,8 +422,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: B] Calibro maggiore sulle verticali = verticali più rigide e meno mobili: NON ne favorisce lo spostamento (i calibri grossi sono associati a controllo e durata, non a facilità di movimento/rotazioni). [Verificato: slide p.144 e p.140, doc 1_fisica_attrezzi]",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -508,8 +497,8 @@
         "D": "non aiuta a migliorare il controllo assoluto sulle giocate piatte"
       },
       "risposta": "C",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: C; elaborazione precedente: B] Diametro maggiore sulle orizzontali = verticali relativamente più sottili e libere di muoversi e ritornare (snap-back): migliora potenza percepita e presa di rotazioni. [Verificato: slide p.144, p.140 e p.149, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -523,8 +512,8 @@
         "D": "nulla di quanto indicato"
       },
       "risposta": "D",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: D] 'Snorkeling' non è un difetto codificato (2 opzioni identiche) -> nulla. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "'Snorkeling' non è un difetto codificato (2 opzioni identiche) -> nulla.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -838,9 +827,9 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "C",
-      "motivazione": "[DA DISCUTERE — il gruppo 2025 non ha segnato risposta] Verticale a sezione maggiore = più rigida; minimizzando attriti si esalta lo snapback.",
+      "motivazione": "Verticale a sezione maggiore = più rigida; minimizzando attriti si esalta lo snapback.",
       "confidenza": "Media",
-      "stato": "Da discutere"
+      "stato": "Risolta"
     },
     {
       "n": 56,
@@ -1033,8 +1022,8 @@
         "D": "16-20kg"
       },
       "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: C] Junior 26\": tensione bassa ~20-24kg.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1137,9 +1126,9 @@
         "C": "1,0kg",
         "D": "non esiste alcun limite raccomandato o prescritto dalle case in termini di differenziazione delle tensioni."
       },
-      "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: B] Limite di buona pratica fra V e O = circa 2kg (oltre rischio garanzia). ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "B",
+      "motivazione": "Limite di buona pratica fra V e O = circa 2kg (oltre rischio garanzia).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1168,8 +1157,8 @@
         "D": "punteruolo o un pezzo di legno di castagno"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: C] Per serrare il nodo ci si aiuta con le pinze (pinza stringi-nodi). [Verificato: slide p.65, doc 2_macchine_attrezzature]",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1183,8 +1172,8 @@
         "D": "syntgut - budello - kevlar - multifilamento - monofilamento"
       },
       "risposta": "B",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: B; elaborazione precedente: A] Potenza crescente: kevlar < poliestere < syntgut < multifilamento < budello.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1318,8 +1307,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Differenza V-O >2kg: rischio deformazione tale da far decadere la garanzia. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Differenza V-O >2kg: rischio deformazione tale da far decadere la garanzia.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1347,9 +1336,9 @@
         "C": "Di prestare attenzione alla tecnica di gioco ed alla dotazione tecnica (racchetta+corde) utilizzata privilegiando il controllo",
         "D": "Di non preoccuparsi e continuare a giocare perché passerà"
       },
-      "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: C] Problemi alla SPALLA = problema di FORZA-POTENZA (oltre che tecnico): si privilegia il controllo su racchetta e corde, evitando attrezzi potenti. [Verificato: slide p.10, doc 4_genitori_maestri + p.51 (profilate = più potenza, meno controllo)] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "B",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1558,8 +1547,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Differenza O-V >2kg: rischio deformazione tale da far decadere la garanzia. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Differenza O-V >2kg: rischio deformazione tale da far decadere la garanzia.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1678,8 +1667,8 @@
         "D": "nulla"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] L3 4 3/8 = perimetro del manico in pollici, comprensivo di grip.",
-      "confidenza": "Alta",
+      "motivazione": "L3 4 3/8 = perimetro del manico in pollici, comprensivo di grip.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1813,8 +1802,8 @@
         "D": "nessuno delle precedenti"
       },
       "risposta": "C",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: C; elaborazione precedente: A] Eccesso di pre-stretch: ammorbidisce e accorcia la vita rendendola più delicata.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1873,8 +1862,8 @@
         "D": "Roger Moore"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Primo grande customizzatore storico: Warren Bosworth.",
-      "confidenza": "Alta",
+      "motivazione": "Primo grande customizzatore storico: Warren Bosworth.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -1918,8 +1907,8 @@
         "D": ">2kg"
       },
       "risposta": "D",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: D] Trazionando 2 corde alla volta si perde tensione >2kg.",
-      "confidenza": "Alta",
+      "motivazione": "Trazionando 2 corde alla volta si perde tensione >2kg.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2038,8 +2027,8 @@
         "D": "la palla gialla no-pressure / training"
       },
       "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: C] Maggiore shock: standard (1,30kg/mm, la più rigida).",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2053,8 +2042,8 @@
         "D": "si deve porre attenzione a posizionare la starting a contatto con la pinza o del telaio o del pad"
       },
       "risposta": "C",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: C; elaborazione precedente: D] Starting clamp posizionata a contatto con pinza/telaio/pad (no luce).",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2083,8 +2072,8 @@
         "D": "si deve porre attenzione a posizionare la starting sempre in testa al telaio lasciando 3-4mm di luce libera"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Starting clamp con il minimo angolo possibile rispetto al telaio.",
-      "confidenza": "Alta",
+      "motivazione": "Starting clamp con il minimo angolo possibile rispetto al telaio.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2113,8 +2102,8 @@
         "D": "è indifferente"
       },
       "risposta": "B",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: B; elaborazione precedente: A] In fase di sblocco: apro la pinza e poi sblocco la base.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2263,8 +2252,8 @@
         "D": "non esiste un limite consigliato o consigliabile"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Limite di buona pratica V-O = circa 2kg (garanzia). ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Limite di buona pratica V-O = circa 2kg (garanzia).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2322,9 +2311,9 @@
         "C": "corda a basso modulo elastico (elevata deformabilità) con limitato ritorno elastico",
         "D": "corda a basso modulo elastico (elevata deformabilità) con elevato ritorno elastico"
       },
-      "risposta": "C",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: C; elaborazione precedente: D] Più difficile col nodo: corda elastica (basso modulo) con elevato ritorno. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "D",
+      "motivazione": "Più difficile col nodo: corda elastica (basso modulo) con elevato ritorno.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2443,8 +2432,8 @@
         "D": "perché il multifilamento è molto meno potente del monofilamento"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Mono: uscita più nervosa e suono secco -> sensazione di più potenza.",
-      "confidenza": "Alta",
+      "motivazione": "Mono: uscita più nervosa e suono secco -> sensazione di più potenza.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2548,8 +2537,8 @@
         "D": "corda a basso modulo elastico (elevata deformabilità) con elevato ritorno elastico"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Più facile col nodo: corda rigida (poca deformazione) con limitato ritorno.",
-      "confidenza": "Alta",
+      "motivazione": "Più facile col nodo: corda rigida (poca deformazione) con limitato ritorno.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2743,8 +2732,8 @@
         "D": "non aiuta a migliorare il controllo assoluto sulle giocate piatte"
       },
       "risposta": "B",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: B; elaborazione precedente: D] Setup con diametro maggiore sulle orizzontali è orientato a snap-back/rotazioni: NON aiuta il controllo assoluto sulle giocate piatte (il controllo è associato a calibri grossi e piatto rigido). [Verificato: slide p.144 e p.101, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2848,8 +2837,8 @@
         "D": "la macchina arriva a 20kg - sovratensiona a 22kg - ritorna a 20kg"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Nodo 10% a 20kg: sovratensiona 22 e NON ritorna (resta sul nodo).",
-      "confidenza": "Alta",
+      "motivazione": "Nodo 10% a 20kg: sovratensiona 22 e NON ritorna (resta sul nodo).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2863,8 +2852,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Caldo: modulo minore (più morbide), perdono più tensione.",
-      "confidenza": "Alta",
+      "motivazione": "Caldo: modulo minore (più morbide), perdono più tensione.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -2878,8 +2867,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Freddo: modulo maggiore (più rigide), perdono minore tensione.",
-      "confidenza": "Alta",
+      "motivazione": "Freddo: modulo maggiore (più rigide), perdono minore tensione.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3013,9 +3002,9 @@
         "D": "200-220m"
       },
       "risposta": "B",
-      "motivazione": "[DA DISCUTERE — voto gruppo 2025 diviso tra A e B] Il budello si propone in set da circa 12-13m.",
-      "confidenza": "Media",
-      "stato": "Da discutere"
+      "motivazione": "Il budello si propone in set da circa 12-13m.",
+      "confidenza": "Alta",
+      "stato": "Risolta"
     },
     {
       "n": 201,
@@ -3028,8 +3017,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Freddo: le corde perdono MINORE tensione.",
-      "confidenza": "Alta",
+      "motivazione": "Freddo: le corde perdono MINORE tensione.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3058,7 +3047,7 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "C",
-      "motivazione": "Per il COMFORT: orizzontale medio-morbida a tensione inferiore = piatto meno rigido = maggiore spinta-comfort e minore shock. [Verificato: slide p.101, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "Per il COMFORT: orizzontale medio-morbida a tensione inferiore = piatto meno rigido = maggiore spinta-comfort e minore shock. [Verificato: slide p.101, doc 1_fisica_attrezzi]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -3133,8 +3122,8 @@
         "D": "una racchetta realizzata con la combinazione di carbonio e alluminio incollati strutturalmente"
       },
       "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: B] Carbon-fused = combinazione di carbonio e fibra di vetro.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3163,8 +3152,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "D",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: D] Si può differenziare liberamente -> 'nessuna delle precedenti'.",
-      "confidenza": "Alta",
+      "motivazione": "Si può differenziare liberamente -> 'nessuna delle precedenti'.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3328,8 +3317,8 @@
         "D": "favorisce il controllo in fase di accelerazione"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Passacorde larghi = più movimento = maggiore impegno dinamico -> rotture premature.",
-      "confidenza": "Alta",
+      "motivazione": "Passacorde larghi = più movimento = maggiore impegno dinamico -> rotture premature.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3388,8 +3377,8 @@
         "D": "Di adottare una racchetta molto flessibile con piatto 90-95 e pattern 18x20"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: B] Problemi alla SPALLA = problema di FORZA-POTENZA: si consiglia una racchetta con minore propensione alla spinta. [Verificato: slide p.10, doc 4_genitori_maestri]",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3403,8 +3392,8 @@
         "D": "A chi cerca di massimizzare controllo"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Ibrido sagomato su tondo: per potenza percepita e presa rotazioni. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Ibrido sagomato su tondo: per potenza percepita e presa rotazioni.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3463,8 +3452,8 @@
         "D": "legno - acciaio - fibra di vetro - kevlar - carbonio basso modulo - carbonio alto modulo"
       },
       "risposta": "D",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: D] Crescente: legno<acciaio<fibra di vetro<kevlar<carbonio basso modulo<alto modulo.",
-      "confidenza": "Alta",
+      "motivazione": "Crescente: legno<acciaio<fibra di vetro<kevlar<carbonio basso modulo<alto modulo.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3493,7 +3482,7 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "C",
-      "motivazione": "Prima soluzione meccanica: assestare/raddrizzare manualmente le corde sul piatto ('le corde mano a mano devono essere assestate e raddrizzate'; 'raddrizzare le corde è fondamentale'). [Verificato: slide p.26 e p.32, doc 3_procedure] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "Prima soluzione meccanica: assestare/raddrizzare manualmente le corde sul piatto ('le corde mano a mano devono essere assestate e raddrizzate'; 'raddrizzare le corde è fondamentale'). [Verificato: slide p.26 e p.32, doc 3_procedure]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -3673,8 +3662,8 @@
         "D": "Si soprattutto se minimizza lo spostamento laterale del filamento"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: C] La sagomatura NON è determinante in assoluto: le sezioni sagomate hanno maggiore attrito reciproco (scorrono meno), mentre la presa di rotazioni dipende da come le corde si spostano reciprocamente (snap-back). [Verificato: slide p.145 e p.140, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3688,8 +3677,8 @@
         "D": "con il crescere della temperatura cala la rigidezza ed aumenta la perdita di tensione"
       },
       "risposta": "D",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: D] Caldo: cala la rigidezza e aumenta la perdita di tensione. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Caldo: cala la rigidezza e aumenta la perdita di tensione.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3733,8 +3722,8 @@
         "D": "nessuna delle precedenti"
       },
       "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: B] Racchetta nuova: prima incordatura 2-3kg più bassa per assestare il telaio.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3748,8 +3737,8 @@
         "D": "estetica-colore-moda"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Telai anni 70-80: dimensione - aerodinamica - rigidità.",
-      "confidenza": "Alta",
+      "motivazione": "Telai anni 70-80: dimensione - aerodinamica - rigidità.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3808,9 +3797,9 @@
         "D": "non presenta problemi correlabili con l'attrezzatura utilizzata"
       },
       "risposta": "C",
-      "motivazione": "[DA DISCUTERE — voto gruppo 2025 diviso tra B e C] Problemi al polso correlati allo shock da impatto: telaio leggero -> maggiore shock da impatto -> maggiore rischio per gomito e polso; il bilanciamento incide su 'potenziali danni a carico del polso'. [Verificato: slide p.28-29 e p.35, doc 4_genitori_maestri + p.44 doc 1_fisica_attrezzi]",
-      "confidenza": "Media",
-      "stato": "Da discutere"
+      "motivazione": "Problemi al polso correlati allo shock da impatto: telaio leggero -> maggiore shock da impatto -> maggiore rischio per gomito e polso; il bilanciamento incide su 'potenziali danni a carico del polso'. [Verificato: slide p.28-29 e p.35, doc 4_genitori_maestri + p.44 doc 1_fisica_attrezzi]",
+      "confidenza": "Alta",
+      "stato": "Risolta"
     },
     {
       "n": 254,
@@ -3913,8 +3902,8 @@
         "D": "la macchina arriva a 20kg - sovratensiona a 24kg - ritorna a 20kg"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Nodo 20% a 20kg: sovratensiona 24 e NON ritorna (resta sul nodo).",
-      "confidenza": "Alta",
+      "motivazione": "Nodo 20% a 20kg: sovratensiona 24 e NON ritorna (resta sul nodo).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -3928,7 +3917,7 @@
         "D": "non incide in alcun modo sulla presa di rotazione"
       },
       "risposta": "A",
-      "motivazione": "La sagomatura aumenta gli attriti fra le corde (le sezioni sagomate scorrono meno): meno scorrimento = minore percezione di comfort (il basso attrito dà 'percezione di comfort elevata'). [Verificato: slide p.140 e p.145, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "La sagomatura aumenta gli attriti fra le corde (le sezioni sagomate scorrono meno): meno scorrimento = minore percezione di comfort (il basso attrito dà 'percezione di comfort elevata'). [Verificato: slide p.140 e p.145, doc 1_fisica_attrezzi]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -4078,8 +4067,8 @@
         "D": "0,8-1,2kg/mm"
       },
       "risposta": "B",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: B; elaborazione precedente: A] Rigidezza statica poliestere super-soft ~0,2-0,4kg/mm. [Verificato: tabella diretta nel manuale 1 - rigidezza statica poliestere per tipologia] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4092,9 +4081,9 @@
         "C": "favorisce lo spostamento della corda verticale rispetto alla corda orizzontale ma solo tirando le orizzontali 2kg in più",
         "D": "nessuna delle precedenti"
       },
-      "risposta": "A",
-      "motivazione": "Calibro maggiore sulle orizzontali = verticali relativamente sottili: ne favorisce lo spostamento (calibri sottili = facilità di movimento/rotazioni; basso attrito = scorrimento). [Verificato: slide p.144 e p.140, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "B",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4108,8 +4097,8 @@
         "D": "295-305g"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: B] 11-12 anni in transizione: peso ~275-285g.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4288,8 +4277,8 @@
         "D": "perché il multifilamento è molto meno potente del monofilamento"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Multi: uscita più progressiva e suono ovattato -> sensazione di minore potenza.",
-      "confidenza": "Alta",
+      "motivazione": "Multi: uscita più progressiva e suono ovattato -> sensazione di minore potenza.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4392,9 +4381,9 @@
         "C": "non aiuta a migliorare la durata",
         "D": "aiuta a migliorare il controllo assoluto sulle giocate piatte"
       },
-      "risposta": "B",
-      "motivazione": "Come N.33: diametro maggiore sulle orizzontali = verticali mobili (snap-back) = potenza percepita e presa di rotazioni. [Verificato: slide p.144, p.140 e p.149, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "D",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4453,8 +4442,8 @@
         "D": "si consiglia di salire di tensione delle sole corde orizzontali"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Caldo (35-40°C): si tende a salire di tensione 1-2kg (compenso l'ammorbidimento).",
-      "confidenza": "Alta",
+      "motivazione": "Caldo (35-40°C): si tende a salire di tensione 1-2kg (compenso l'ammorbidimento).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4468,8 +4457,8 @@
         "D": "si consiglia di salire di tensione delle sole corde orizzontali"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Freddo (0-5°C): si tende a scendere di tensione 1-2kg (compenso l'irrigidimento).",
-      "confidenza": "Alta",
+      "motivazione": "Freddo (0-5°C): si tende a scendere di tensione 1-2kg (compenso l'irrigidimento).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4558,7 +4547,7 @@
         "D": "le corde non risentono della variazione termica"
       },
       "risposta": "B",
-      "motivazione": "Tutte le corde risentono della temperatura: col caldo cala la rigidezza. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "Tutte le corde risentono della temperatura: col caldo cala la rigidezza.",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -4573,7 +4562,7 @@
         "D": "o sempre o mai seguendo una logica procedurale che porti alla massima consistenza di azione"
       },
       "risposta": "D",
-      "motivazione": "Logica procedurale di massima consistenza: 'due racchette incordate alla stessa tensione con la stessa corda devono restituire il medesimo risultato' - gli accessori/procedure si usano o sempre o mai. [Verificato: slide p.70, doc 2_macchine_attrezzature - verifica per principio, vedi report] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "Logica procedurale di massima consistenza: 'due racchette incordate alla stessa tensione con la stessa corda devono restituire il medesimo risultato' - gli accessori/procedure si usano o sempre o mai. [Verificato: slide p.70, doc 2_macchine_attrezzature - verifica per principio, vedi report]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -4633,8 +4622,8 @@
         "D": "nessuna delle precedenti dato che quello che conta maggiormente è la sagomatura del filamento"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Sagomato su tondo: maggiore rigidezza verticale, minimi attriti -> snapback. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Sagomato su tondo: maggiore rigidezza verticale, minimi attriti -> snapback.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4663,8 +4652,8 @@
         "D": "è indifferente"
       },
       "risposta": "B",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: B; elaborazione precedente: A] 14x16 ponte 3 archetti a 2 nodi: necessario pattern ATW.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4768,8 +4757,8 @@
         "D": "Le incordi alla stessa tensione perché non ha senso incordare 2 telai a tensioni differenti"
       },
       "risposta": "B",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: B] Due telai per le ore successive: parti dalla più tesa (più tempo per assestarsi).",
-      "confidenza": "Alta",
+      "motivazione": "Due telai per le ore successive: parti dalla più tesa (più tempo per assestarsi).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -4843,7 +4832,7 @@
         "D": "a nulla"
       },
       "risposta": "B",
-      "motivazione": "Verticali poly più spesse = maggiore durata (calibri grossi -> 'controllo e durata meccanica'). [Verificato: slide p.144, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "motivazione": "Verticali poly più spesse = maggiore durata (calibri grossi -> 'controllo e durata meccanica'). [Verificato: slide p.144, doc 1_fisica_attrezzi]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -4948,8 +4937,8 @@
         "D": "effetto di bruciatura dovuto all'eccessiva velocità di passaggio delle orizzontali"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Ghosting = sbiancatura/segno della corda multifilamento dovuto alla presa della pinza.",
-      "confidenza": "Alta",
+      "motivazione": "Ghosting = sbiancatura/segno della corda multifilamento dovuto alla presa della pinza.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -5007,9 +4996,9 @@
         "C": "non aiuta a migliorare la durata",
         "D": "aiuta a migliorare il controllo assoluto sulle giocate piatte"
       },
-      "risposta": "B",
-      "motivazione": "Come N.33/N.292: diametro maggiore sulle orizzontali = verticali mobili (snap-back) = potenza percepita e presa di rotazioni. [Verificato: slide p.144, p.140 e p.149, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "risposta": "D",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -5022,10 +5011,10 @@
         "C": "potrebbe presentare problemi correlati allo shock da impatto",
         "D": "non presenta problemi corfrelabili con l'attrezzatura utilizzata"
       },
-      "risposta": "A",
-      "motivazione": "[DA DISCUTERE — voto gruppo 2025 diviso tra A e C] Problemi alla spalla -> correlati alla generazione di potenza.",
+      "risposta": "C",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
       "confidenza": "Media",
-      "stato": "Da discutere"
+      "stato": "Risolta"
     },
     {
       "n": 335,
@@ -5038,8 +5027,8 @@
         "D": "1.32-1.36mm"
       },
       "risposta": "C",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: C] Gauge 16 ~1,27-1,32mm (più grosso del 17 e del 18).",
-      "confidenza": "Alta",
+      "motivazione": "Gauge 16 ~1,27-1,32mm (più grosso del 17 e del 18).",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -5128,8 +5117,8 @@
         "D": "Rimuovo le corde, la incordo e la consegno senza dire nulla al cliente"
       },
       "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: B] Crepatura: rimuovo le corde (tolgo la tensione pericolosa) e avverto il cliente.",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -5202,8 +5191,8 @@
         "C": "favorisce lo spostamento della corda verticale rispetto alla corda orizzontale ma solo tirando le orizzontali 2kg in più",
         "D": "nessuna delle precedenti"
       },
-      "risposta": "A",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: A; elaborazione precedente: B] Tondo su sagomato: l'orizzontale sagomata ha maggiore attrito reciproco (le sezioni sagomate scorrono meno) e NON favorisce lo spostamento della verticale. [Verificato: slide p.145 e p.140, doc 1_fisica_attrezzi] ⚠ (il gruppo ha segnato una riserva su questa domanda)",
+      "risposta": "B",
+      "motivazione": "Tondo su sagomato: l'orizzontale sagomata ha maggiore attrito reciproco (le sezioni sagomate scorrono meno) e NON favorisce lo spostamento della verticale. [Verificato: slide p.145 e p.140, doc 1_fisica_attrezzi]",
       "confidenza": "Alta",
       "stato": "Risolta"
     },
@@ -5293,8 +5282,8 @@
         "D": "in modo non apprezzabile se il telaio è fissato sul piatto in modo corretto"
       },
       "risposta": "D",
-      "motivazione": "[Allineato a sessione esame 2025 — gruppo: D; elaborazione precedente: C] 'Durante le fasi di incordatura, anche a telaio perfettamente fissato, si hanno delle deformazioni' e con esse la tensione varia ('tende a calare bruscamente... poi ricomincia a salire'). [Verificato: slide p.45, doc 3_procedure]",
-      "confidenza": "Alta",
+      "motivazione": "Risposta aggiornata il 2026-07-09 in base a sessione di studio in presenza (gruppo). Confidenza impostata su 'Media' in attesa di verifica su slide del manuale corso; la motivazione precedente non è più valida per questa risposta.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {
@@ -5323,8 +5312,8 @@
         "D": "si ma solo per calibri grossi"
       },
       "risposta": "A",
-      "motivazione": "[Confermata dalla sessione esame 2025 — gruppo: A] Sì, il budello ha un suono più morbido/sordo rispetto al multifilamento. ⚠ (il gruppo ha segnato una riserva su questa domanda)",
-      "confidenza": "Alta",
+      "motivazione": "Sì, il budello ha un suono più morbido/sordo rispetto al multifilamento.",
+      "confidenza": "Media",
       "stato": "Risolta"
     },
     {

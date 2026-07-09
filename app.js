@@ -27,6 +27,17 @@
   };
 
   const $ = (sel) => document.querySelector(sel);
+
+  // Escape per interpolazione sicura in innerHTML. Usare su qualsiasi valore
+  // di origine non certa (dati cloud/localStorage) prima di iniettarlo.
+  function esc(v){
+    return String(v == null ? "" : v)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
   const screens = {
     welcome: $("#screen-welcome"),
     setup: $("#screen-setup"),
@@ -81,6 +92,25 @@
     el.className = "muted sync-status" + (kind ? " " + kind : "");
   }
 
+  // Normalizza una voce di history a soli campi con tipi attesi. I dati
+  // remoti arrivano dal cloud (chiave = codice sync condiviso in chiaro):
+  // non fidarsi mai del contenuto, coercizzare tutto prima dell'uso/render.
+  function sanitizeHistoryEntry(h){
+    if(!h || typeof h !== "object") return null;
+    const date = typeof h.date === "string" ? h.date : "";
+    const ids = Array.isArray(h.ids)
+      ? h.ids.map(x => parseInt(x, 10)).filter(Number.isInteger)
+      : [];
+    return {
+      date,
+      score: Number(h.score) || 0,
+      total: Number(h.total) || 0,
+      ids,
+      timed: !!h.timed,
+      timeLimitSec: Number(h.timeLimitSec) || 0
+    };
+  }
+
   // Fonde due stati: max di seen/wrong per domanda, unione delle history.
   function mergeStats(local, remote){
     if(!remote || typeof remote !== "object") return local;
@@ -98,8 +128,10 @@
       };
     });
     const seen = new Set();
-    [...(local.history||[]), ...(remote.history||[])].forEach(h => {
-      const k = (h && h.date) ? h.date : JSON.stringify(h);
+    [...(local.history||[]), ...(remote.history||[])].forEach(raw => {
+      const h = sanitizeHistoryEntry(raw);
+      if(!h) return;
+      const k = h.date ? h.date : JSON.stringify(h);
       if(seen.has(k)) return;
       seen.add(k);
       out.history.push(h);
@@ -704,7 +736,7 @@
         const canRetry = Array.isArray(h.ids) && h.ids.length > 0;
         html += `<div class="history-row">
           <div class="history-info">
-            <span class="history-date">${d.toLocaleDateString("it-IT")} ${d.toLocaleTimeString("it-IT",{hour:'2-digit',minute:'2-digit'})}</span>
+            <span class="history-date">${esc(d.toLocaleDateString("it-IT"))} ${esc(d.toLocaleTimeString("it-IT",{hour:'2-digit',minute:'2-digit'}))}</span>
             <div class="bar"><div class="bar-fill" style="width:${p}%"></div></div>
             <span class="pct">${h.score}/${h.total}</span>
           </div>
