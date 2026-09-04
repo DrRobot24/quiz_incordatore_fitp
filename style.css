@@ -787,9 +787,22 @@ body:has(#screen-welcome.active) #app-header{ display:none; }
 .search-chip.is-on:hover{ background: var(--court-dark); }
 .search-chip.is-on .chip-n{ opacity: .85; }
 
+/* --- Barra contatore: resta in alto mentre si scorrono i risultati --- */
+.search-sticky{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: 0 0 1rem;
+  padding: .55rem .9rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px -10px rgba(11,30,22,.6);
+}
+
 /* --- Contatore esiti --- */
 .search-count{
-  margin: .85rem 0 0;
+  margin: 0;
   font-size: .88rem;
   color: var(--ink-soft);
   min-height: 1.2em;
@@ -926,4 +939,15 @@ body:has(#screen-welcome.active) #app-header{ display:none; }
   .res-question{ font-size: .96rem; }
   .res-opt{ font-size: .88rem; }
   .search-spread{ display:block; margin: .35rem 0 0; }
+}
+
+/* Zero esiti: il numero vira su clay, si legge come stato negativo */
+.search-count b.is-zero{ color: var(--clay); }
+
+/* Il numero cambia a ogni tasto: una transizione breve evita lo sfarfallio */
+.search-count b{ transition: color .15s ease; }
+
+@media (max-width: 560px){
+  .search-sticky{ padding: .5rem .7rem; border-radius: 8px; }
+  .search-count{ font-size: .84rem; }
 }

@@ -470,17 +470,50 @@
     </div>`;
   }
 
-  function runSearch(){
-    const resEl = $("#search-results");
-    const countEl = $("#search-count");
-    if(!resEl || !countEl) return;
-
+  // Filtro puro: nessun tocco al DOM, così il conteggio può girare a ogni
+  // tasto mentre il rendering delle card resta dietro al debounce.
+  function currentHits(){
     const terms = searchTerms(searchState.query);
     const scoped = searchState.topic !== "all";
+    let hits = ALL_QUESTIONS;
+    if(scoped) hits = hits.filter(q => q.topic === searchState.topic);
+    if(terms.length) hits = hits.filter(q => terms.every(t => q.searchBlob.indexOf(t) !== -1));
+    // Query vuota senza capitolo scelto: stato di riposo, si mostra la guida.
+    return { hits: hits, terms: terms, scoped: scoped, idle: (terms.length === 0 && !scoped) };
+  }
 
-    // Query vuota senza capitolo scelto: niente muro di 360 card, solo la guida.
-    if(terms.length === 0 && !scoped){
-      countEl.textContent = "";
+  function updateCount(state){
+    const bar = $("#search-sticky");
+    const el = $("#search-count");
+    if(!bar || !el) return;
+    const s = state || currentHits();
+
+    if(s.idle){ bar.hidden = true; el.textContent = ""; return; }
+    bar.hidden = false;
+
+    if(s.hits.length === 0){
+      const q = searchState.query.trim();
+      el.innerHTML = `<b class="is-zero">0</b> esiti${q ? " per «" + esc(q) + "»" : ""}`;
+      return;
+    }
+
+    // Con più capitoli in gioco mostro lo spaccato: è la prova visiva che la
+    // ricerca taglia trasversalmente i capitoli.
+    const per = {};
+    s.hits.forEach(q => per[q.topic] = (per[q.topic] || 0) + 1);
+    const topicsHit = Object.keys(per).sort();
+    const spread = (!s.scoped && topicsHit.length > 1)
+      ? ` <span class="search-spread">${esc(topicsHit.map(t => (TOPIC_SHORT[t] || t) + " " + per[t]).join(" · "))}</span>`
+      : "";
+    el.innerHTML = `<b>${s.hits.length}</b> ${s.hits.length === 1 ? "esito" : "esiti"} su ${ALL_QUESTIONS.length}${spread}`;
+  }
+
+  function renderResults(state){
+    const resEl = $("#search-results");
+    if(!resEl) return;
+    const s = state || currentHits();
+
+    if(s.idle){
       resEl.innerHTML = searchHintHtml();
       resEl.querySelectorAll(".search-suggest").forEach(b => {
         b.addEventListener("click", () => applySearchQuery(b.textContent));
@@ -488,29 +521,14 @@
       return;
     }
 
-    let hits = ALL_QUESTIONS;
-    if(scoped) hits = hits.filter(q => q.topic === searchState.topic);
-    if(terms.length) hits = hits.filter(q => terms.every(t => q.searchBlob.indexOf(t) !== -1));
-
-    if(hits.length === 0){
-      countEl.textContent = "0 esiti";
-      resEl.innerHTML = searchEmptyHtml(searchState.query, scoped);
+    if(s.hits.length === 0){
+      resEl.innerHTML = searchEmptyHtml(searchState.query, s.scoped);
       return;
     }
 
-    // Con più capitoli in gioco mostro lo spaccato: è la prova visiva che la
-    // ricerca taglia trasversalmente i capitoli.
-    const per = {};
-    hits.forEach(q => per[q.topic] = (per[q.topic] || 0) + 1);
-    const topicsHit = Object.keys(per).sort();
-    const spread = (!scoped && topicsHit.length > 1)
-      ? ` <span class="search-spread">${esc(topicsHit.map(t => (TOPIC_SHORT[t] || t) + " " + per[t]).join(" · "))}</span>`
-      : "";
-    countEl.innerHTML = `<b>${hits.length}</b> ${hits.length === 1 ? "esito" : "esiti"} su ${ALL_QUESTIONS.length}${spread}`;
-
-    const shown = hits.slice(0, searchState.limit);
-    let html = shown.map(q => resultCardHtml(q, terms)).join("");
-    const rest = hits.length - shown.length;
+    const shown = s.hits.slice(0, searchState.limit);
+    let html = shown.map(q => resultCardHtml(q, s.terms)).join("");
+    const rest = s.hits.length - shown.length;
     if(rest > 0){
       html += `<div class="search-more"><button type="button" class="ghost" id="btn-search-more">Mostra altri ${Math.min(SEARCH_PAGE, rest)} <span class="muted">(${rest} rimanenti)</span></button></div>`;
     }
@@ -521,6 +539,13 @@
       searchState.limit += SEARCH_PAGE;
       runSearch();
     });
+  }
+
+  // Aggiorna conteggio e risultati insieme: filtri, suggerimenti, avvio.
+  function runSearch(){
+    const s = currentHits();
+    updateCount(s);
+    renderResults(s);
   }
 
   function applySearchQuery(value){
@@ -558,8 +583,9 @@
       searchState.query = input.value;
       searchState.limit = SEARCH_PAGE;
       updateSearchClear();
+      updateCount();                                      // subito, a ogni tasto
       clearTimeout(searchDebounce);
-      searchDebounce = setTimeout(runSearch, 150);
+      searchDebounce = setTimeout(() => renderResults(), 150);  // le card possono aspettare
     });
 
     const clear = $("#btn-search-clear");
