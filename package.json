@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "description": "Quiz Incordatore FITP - Super String 1.0",
+  "scripts": {
+    "dev": "npx --yes http-server . -p 8000 -c-1 -o",
+    "dev:api": "npx --yes vercel dev --listen 8000"
+  },
   "dependencies": {
     "@upstash/redis": "^1.38.0"
   }

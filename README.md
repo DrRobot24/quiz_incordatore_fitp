@@ -28,6 +28,17 @@ Apri il quiz: https://drrobot24.github.io/quiz_incordatore_fitp/
 6. Al termine vedi il **punteggio totale**, lo spaccato per argomento e l'elenco delle domande sbagliate. Con **"Rifai solo gli errori"** rilanci un quiz con le sole domande che hai appena sbagliato.
 7. Il sito **pesa automaticamente** le domande: quelle già sbagliate in passato (o marcate con confidenza "Media") hanno più probabilità di ricomparire, così il ripasso si concentra sui punti deboli.
 8. I progressi (punteggi, domande sbagliate, statistiche) restano salvati nel **browser stesso** (`localStorage`), senza registrazione.
+9. Il pulsante **"Cerca nell'archivio"** apre la ricerca su tutte e 360 le domande: digiti una parola e trovi ogni domanda che la contiene, nel testo, nelle risposte o nella motivazione, con la risposta corretta già evidenziata.
+
+### Archivio e ricerca
+
+I moduli dicono *da dove viene* una domanda; la ricerca dice *di cosa parla*. Sono due tagli diversi della stessa banca: «tensione» compare in 92 domande sparse su 4 moduli su 5, quindi il filtro per modulo da solo non basta per ripassare quel concetto.
+
+- cerca in **testo della domanda, opzioni e motivazione** insieme
+- accenti indifferenti (`perche` trova `perché`), più parole in **AND**, match anche parziale
+- **combinabile** con il filtro per modulo, con lo spaccato degli esiti modulo per modulo
+- toccare un modulo senza digitare nulla lo **sfoglia** tutto
+- risultati a pagine da 40, con "Mostra altri"
 
 ## Avviarlo in locale
 
@@ -36,10 +47,18 @@ Le domande sono in `data.json`, caricato via `fetch`: aprire `index.html` dirett
 ```bash
 git clone https://github.com/DrRobot24/quiz_incordatore_fitp.git
 cd quiz_incordatore_fitp
-python3 -m http.server 8000
+npm run dev
 ```
 
-Poi apri `http://localhost:8000` nel browser.
+Apre da solo `http://localhost:8000`. Non serve `npm install`: il sito è statico, non ha dipendenze da compilare (`@upstash/redis` serve solo alla funzione serverless `api/progress.js`, che gira su Vercel).
+
+In alternativa, senza Node:
+
+```bash
+python3 -m http.server 8000   # su Windows: python -m http.server 8000
+```
+
+**Nota sul sync in locale.** Un server statico non esegue `api/progress.js`, quindi `/api/progress` risponde 404 e il salvataggio cloud si disattiva da solo con un avviso: i progressi restano nel `localStorage` del browser. Tutto il resto — quiz, archivio, ricerca, statistiche — funziona normalmente. Per provare anche il sync serve `npm run dev:api` (usa `vercel dev`, richiede login Vercel e le variabili d'ambiente Upstash).
 
 ## Deploy
 
@@ -49,10 +68,12 @@ Il progetto è un sito statico servito dalla root. `vercel.json` è configurato 
 
 ```
 quiz_incordatore_fitp/
-├── index.html      schermate dell'app: configurazione, quiz, risultati
+├── index.html      schermate dell'app: configurazione, archivio, quiz, risultati
 ├── style.css       stile visivo (temi, sfondo, schede argomenti)
-├── app.js          logica: generazione quiz pesata, timer, punteggio, salvataggio progressi
+├── app.js          logica: generazione quiz pesata, timer, punteggio, ricerca, salvataggio progressi
 ├── data.json       le 360 domande (risposta, motivazione, argomento, confidenza, riferimento dispensa)
+├── api/
+│   └── progress.js funzione serverless per il sync dei progressi (Upstash Redis)
 ├── vercel.json     configurazione deploy statico su Vercel
 ├── public/         materiale di studio e asset
 │   ├── 1_fisica_attrezzi.pdf
