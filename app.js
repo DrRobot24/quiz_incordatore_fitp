@@ -41,6 +41,7 @@
   const screens = {
     welcome: $("#screen-welcome"),
     setup: $("#screen-setup"),
+    search: $("#screen-search"),
     quiz: $("#screen-quiz"),
     results: $("#screen-results")
   };
@@ -273,10 +274,13 @@
       .then(r => r.json())
       .then(data => {
         ALL_QUESTIONS = normalizeQuestions(data);
+        buildSearchIndex();
         buildTopicsList();
+        buildSearchFilters();
         renderStats();
         bindEvents();
         renderSyncBadge();
+        runSearch();
       })
       .catch(err => {
         $("#topics-list").innerHTML = "<p class='muted'>Impossibile caricare data.json. Se hai aperto il file direttamente nel browser, avvia un piccolo server locale (vedi README) oppure pubblica su GitHub Pages.</p>";
@@ -318,7 +322,256 @@
 
   function cssId(s){ return s.replace(/[^a-zA-Z0-9]/g, "_"); }
 
+  // ---- Archivio / ricerca full-text ----
+  // Asse ortogonale al filtro per capitolo: il capitolo dice da dove viene la
+  // domanda, la ricerca dice di cosa parla. "tensione" tocca 4 capitoli su 5.
+
+  const SEARCH_PAGE = 40;
+  const SEARCH_SUGGESTIONS = ["tensione", "nodo", "bilanciamento", "verticali"];
+  let searchState = { query: "", topic: "all", limit: SEARCH_PAGE };
+  let searchDebounce = null;
+
+  // Minuscole + accenti rimossi, così "però" trova "pero" e viceversa.
+  function normText(s){
+    return String(s == null ? "" : s)
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
+  // Normalizza tenendo una mappa verso gli indici della stringa ORIGINALE.
+  // Serve perché la normalizzazione cambia le lunghezze (è -> e) e senza mappa
+  // l'evidenziazione ritaglierebbe il testo nel punto sbagliato.
+  function normWithMap(str){
+    const chars = [];
+    const map = [];
+    for(let i = 0; i < str.length; i++){
+      const n = normText(str[i]);
+      for(let j = 0; j < n.length; j++){ chars.push(n[j]); map.push(i); }
+    }
+    return { text: chars.join(""), map: map };
+  }
+
+  function questionBlob(q){
+    const opts = q.options ? Object.keys(q.options).map(k => q.options[k]).join(" ") : "";
+    return [q.question, opts, q.explanation].join(" ");
+  }
+
+  function buildSearchIndex(){
+    ALL_QUESTIONS.forEach(q => { q.searchBlob = normText(questionBlob(q)); });
+  }
+
+  function searchTerms(query){
+    return normText(query).split(/\s+/).filter(t => t.length > 0);
+  }
+
+  // Evidenzia i termini SENZA mai passare input grezzo a innerHTML: ritaglia
+  // l'originale in pezzi, escapa ogni pezzo, e solo dopo aggiunge i <mark>.
+  function highlight(text, terms){
+    const raw = String(text == null ? "" : text);
+    if(!terms.length || !raw) return esc(raw);
+
+    const norm = normWithMap(raw);
+    const ranges = [];
+    terms.forEach(t => {
+      let from = 0;
+      for(;;){
+        const at = norm.text.indexOf(t, from);
+        if(at === -1) break;
+        ranges.push([norm.map[at], norm.map[at + t.length - 1] + 1]);
+        from = at + t.length;
+      }
+    });
+    if(!ranges.length) return esc(raw);
+
+    // Termini diversi possono coprire testo sovrapposto: fondo gli intervalli.
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [ranges[0]];
+    for(let i = 1; i < ranges.length; i++){
+      const last = merged[merged.length - 1];
+      if(ranges[i][0] <= last[1]) last[1] = Math.max(last[1], ranges[i][1]);
+      else merged.push(ranges[i]);
+    }
+
+    let out = "";
+    let cursor = 0;
+    merged.forEach(r => {
+      out += esc(raw.slice(cursor, r[0])) + "<mark>" + esc(raw.slice(r[0], r[1])) + "</mark>";
+      cursor = r[1];
+    });
+    return out + esc(raw.slice(cursor));
+  }
+
+  function buildSearchFilters(){
+    const container = $("#search-filters");
+    if(!container) return;
+    const counts = {};
+    ALL_QUESTIONS.forEach(q => counts[q.topic] = (counts[q.topic] || 0) + 1);
+    const topics = Object.keys(counts).sort();
+
+    const chips = [`<button type="button" class="search-chip is-on" data-topic="all">Tutti <span class="chip-n">${ALL_QUESTIONS.length}</span></button>`];
+    topics.forEach(t => {
+      chips.push(`<button type="button" class="search-chip" data-topic="${esc(t)}">${esc(TOPIC_SHORT[t] || t)} <span class="chip-n">${counts[t]}</span></button>`);
+    });
+    container.innerHTML = chips.join("");
+
+    container.querySelectorAll(".search-chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        searchState.topic = btn.dataset.topic;
+        searchState.limit = SEARCH_PAGE;
+        container.querySelectorAll(".search-chip").forEach(b => b.classList.toggle("is-on", b === btn));
+        runSearch();
+      });
+    });
+
+    const bank = $("#search-bank");
+    if(bank) bank.textContent = ALL_QUESTIONS.length + " domande";
+  }
+
+  function resultCardHtml(q, terms){
+    const opts = ["A", "B", "C", "D"].map(L => {
+      const val = q.options ? q.options[L] : null;
+      if(val == null) return "";
+      const right = (L === q.answer);
+      return `<div class="res-opt${right ? " is-right" : ""}">
+        <span class="res-opt-letter">${L}</span>
+        <span class="res-opt-text">${highlight(val, terms)}</span>
+        ${right ? '<span class="res-opt-flag" title="Risposta corretta">✅</span>' : ""}
+      </div>`;
+    }).join("");
+
+    return `<article class="card result-card">
+      <div class="res-head">
+        <span class="q-id">N° ${esc(q.id)}</span>
+        <span class="topic-tag">${esc(TOPIC_SHORT[q.topic] || q.topic)}</span>
+        ${q.confidence === "Media" ? '<span class="res-conf">da rivedere</span>' : ""}
+      </div>
+      <p class="res-question">${highlight(q.question, terms)}</p>
+      <div class="res-opts">${opts}</div>
+      ${q.explanation ? `<div class="res-why"><span class="res-why-tag">Perché</span>${highlight(q.explanation, terms)}</div>` : ""}
+    </article>`;
+  }
+
+  function searchHintHtml(){
+    const chips = SEARCH_SUGGESTIONS
+      .map(w => `<button type="button" class="search-suggest">${esc(w)}</button>`)
+      .join(" ");
+    return `<div class="card search-hint">
+      <p>Digita una parola per cercarla in tutte le <b>${ALL_QUESTIONS.length} domande</b> — testo, risposte e spiegazione.</p>
+      <p class="muted">Oppure tocca un capitolo qui sopra per sfogliarlo tutto.</p>
+      <p class="search-suggest-row">Prova con: ${chips}</p>
+    </div>`;
+  }
+
+  function searchEmptyHtml(query, scoped){
+    return `<div class="card search-hint">
+      <p><b>Nessuna domanda contiene «${esc(query)}»</b>${scoped ? " in questo capitolo" : ""}.</p>
+      <p class="muted">La banca dati potrebbe usare un altro termine: per esempio le corde trasversali qui si chiamano <b>verticali</b>, non "crociate". Prova un sinonimo o una parola più corta — la ricerca trova anche parti di parola.</p>
+    </div>`;
+  }
+
+  function runSearch(){
+    const resEl = $("#search-results");
+    const countEl = $("#search-count");
+    if(!resEl || !countEl) return;
+
+    const terms = searchTerms(searchState.query);
+    const scoped = searchState.topic !== "all";
+
+    // Query vuota senza capitolo scelto: niente muro di 360 card, solo la guida.
+    if(terms.length === 0 && !scoped){
+      countEl.textContent = "";
+      resEl.innerHTML = searchHintHtml();
+      resEl.querySelectorAll(".search-suggest").forEach(b => {
+        b.addEventListener("click", () => applySearchQuery(b.textContent));
+      });
+      return;
+    }
+
+    let hits = ALL_QUESTIONS;
+    if(scoped) hits = hits.filter(q => q.topic === searchState.topic);
+    if(terms.length) hits = hits.filter(q => terms.every(t => q.searchBlob.indexOf(t) !== -1));
+
+    if(hits.length === 0){
+      countEl.textContent = "0 esiti";
+      resEl.innerHTML = searchEmptyHtml(searchState.query, scoped);
+      return;
+    }
+
+    // Con più capitoli in gioco mostro lo spaccato: è la prova visiva che la
+    // ricerca taglia trasversalmente i capitoli.
+    const per = {};
+    hits.forEach(q => per[q.topic] = (per[q.topic] || 0) + 1);
+    const topicsHit = Object.keys(per).sort();
+    const spread = (!scoped && topicsHit.length > 1)
+      ? ` <span class="search-spread">${esc(topicsHit.map(t => (TOPIC_SHORT[t] || t) + " " + per[t]).join(" · "))}</span>`
+      : "";
+    countEl.innerHTML = `<b>${hits.length}</b> ${hits.length === 1 ? "esito" : "esiti"} su ${ALL_QUESTIONS.length}${spread}`;
+
+    const shown = hits.slice(0, searchState.limit);
+    let html = shown.map(q => resultCardHtml(q, terms)).join("");
+    const rest = hits.length - shown.length;
+    if(rest > 0){
+      html += `<div class="search-more"><button type="button" class="ghost" id="btn-search-more">Mostra altri ${Math.min(SEARCH_PAGE, rest)} <span class="muted">(${rest} rimanenti)</span></button></div>`;
+    }
+    resEl.innerHTML = html;
+
+    const moreBtn = $("#btn-search-more");
+    if(moreBtn) moreBtn.addEventListener("click", () => {
+      searchState.limit += SEARCH_PAGE;
+      runSearch();
+    });
+  }
+
+  function applySearchQuery(value){
+    const input = $("#search-input");
+    if(input) input.value = value;
+    searchState.query = value;
+    searchState.limit = SEARCH_PAGE;
+    updateSearchClear();
+    runSearch();
+  }
+
+  function updateSearchClear(){
+    const btn = $("#btn-search-clear");
+    if(btn) btn.hidden = searchState.query.length === 0;
+  }
+
+  function openSearch(){
+    showScreen("search");
+    // Su touch il focus automatico farebbe saltare su la tastiera e coprire i
+    // filtri: lo do solo dove c'è un puntatore vero.
+    const input = $("#search-input");
+    if(input && window.matchMedia && window.matchMedia("(hover: hover)").matches){
+      setTimeout(() => input.focus(), 50);
+    }
+  }
+
+  function bindSearchEvents(){
+    document.querySelectorAll(".js-open-search").forEach(b => b.addEventListener("click", openSearch));
+
+    const back = $("#btn-search-back");
+    if(back) back.addEventListener("click", () => { showScreen("setup"); renderStats(); });
+
+    const input = $("#search-input");
+    if(input) input.addEventListener("input", () => {
+      searchState.query = input.value;
+      searchState.limit = SEARCH_PAGE;
+      updateSearchClear();
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(runSearch, 150);
+    });
+
+    const clear = $("#btn-search-clear");
+    if(clear) clear.addEventListener("click", () => {
+      applySearchQuery("");
+      if(input) input.focus();
+    });
+  }
+
   function bindEvents(){
+    bindSearchEvents();
+
     const enterBtn = $("#btn-enter");
     if(enterBtn) enterBtn.addEventListener("click", () => showScreen("setup"));
 

@@ -8,8 +8,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Super String 1.0 · Quiz incordatore FITP</title>
-<link rel="stylesheet" href="style.css?v=15">
-<!-- app.js v14: normalizzazione nuovo formato data.json -->
+<link rel="stylesheet" href="style.css?v=16">
+<!-- app.js v15: archivio domande con ricerca full-text -->
 </head>
 <body>
 <div class="wrap">
@@ -99,6 +99,7 @@
 
       <div class="actions">
         <button class="ghost" id="btn-reset-stats" type="button">Azzera statistiche salvate</button>
+        <button class="ghost js-open-search" type="button">🔍 Cerca nell'archivio</button>
         <button id="btn-start" type="button">🎾 Inizia quiz 💪</button>
       </div>
     </div>
@@ -109,6 +110,30 @@
       <h2>Le tue statistiche</h2>
       <div id="stats-content"></div>
     </div>
+  </section>
+
+  <!-- ARCHIVIO / RICERCA -->
+  <section id="screen-search" class="screen">
+    <div class="card">
+      <div class="quiz-topbar">
+        <button class="ghost small" id="btn-search-back" type="button">← Torna</button>
+        <span class="search-bank" id="search-bank"></span>
+      </div>
+
+      <h1>Archivio domande 📚</h1>
+      <p class="muted">Cerca una parola e trova <b>tutte</b> le domande che la contengono — nel testo, nelle risposte o nella spiegazione. La ricerca attraversa i capitoli: un concetto come «tensione» vive in quattro capitoli diversi.</p>
+
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="search-input" placeholder="es. tensione, nodo, bilanciamento…" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Cerca nelle domande" aria-describedby="search-count">
+        <button class="search-clear" id="btn-search-clear" type="button" aria-label="Pulisci la ricerca" hidden>✕</button>
+      </div>
+
+      <div class="search-filters" id="search-filters" role="group" aria-label="Filtra per capitolo"></div>
+      <p class="search-count" id="search-count" role="status" aria-live="polite"></p>
+    </div>
+
+    <div id="search-results"></div>
   </section>
 
   <!-- QUIZ -->
@@ -165,6 +190,7 @@
 
     <div class="actions">
       <button class="ghost" id="btn-restart" type="button">Torna al setup</button>
+      <button class="ghost js-open-search" type="button">🔍 Archivio</button>
       <button class="clay" id="btn-retry-wrong" type="button" style="display:none;">Rifai solo gli errori</button>
     </div>
   </section>
@@ -172,6 +198,6 @@
   <footer>Super String 1.0 · Strumento di studio non ufficiale per l'esame incordatore FITP by <a href="https://www.encreade.com" target="_blank" rel="noopener">Encreade</a></footer>
 </div>
 
-<script src="app.js?v=14"></script>
+<script src="app.js?v=15"></script>
 </body>
 </html>

@@ -698,3 +698,232 @@ body:has(#screen-welcome.active) #app-header{ display:none; }
   .welcome-title{ font-size: 1.6rem; }
   .choices label{ font-size:.8rem; }
 }
+
+/* ===========================================================
+   ARCHIVIO DOMANDE · ricerca full-text
+   =========================================================== */
+
+.search-bank{
+  margin-left:auto;
+  font-family: var(--font-mono);
+  font-size:.74rem;
+  color: var(--ink-soft);
+}
+
+/* --- Campo di ricerca --- */
+.search-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 1.1rem 0 .9rem;
+}
+.search-box .search-icon{
+  position: absolute;
+  left: .85rem;
+  font-size: 1rem;
+  line-height: 1;
+  pointer-events: none;
+  opacity: .75;
+}
+.search-box input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: .8rem 2.6rem .8rem 2.6rem;
+  transition: border-color .15s ease, background .15s ease;
+}
+.search-box input::placeholder{ color: var(--ink-soft); opacity:.8; }
+.search-box input:focus{
+  outline: none;
+  border-color: var(--court);
+  background: var(--white);
+}
+/* Nasconde la X nativa di input[type=search]: usiamo la nostra */
+.search-box input::-webkit-search-cancel-button{ -webkit-appearance: none; appearance: none; }
+
+.search-clear{
+  position: absolute;
+  right: .5rem;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: .85rem;
+  padding: .35rem .5rem;
+  border-radius: 50%;
+  line-height: 1;
+}
+.search-clear:hover{ background: var(--paper-dim); color: var(--ink); }
+
+/* --- Chip filtro capitolo --- */
+.search-filters{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.search-chip{
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: .38rem .75rem;
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+.search-chip:hover{ background: var(--paper-dim); color: var(--ink); }
+.search-chip .chip-n{
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  opacity: .7;
+  margin-left: .15rem;
+}
+.search-chip.is-on{
+  background: var(--court);
+  border-color: var(--court);
+  color: var(--white);
+}
+.search-chip.is-on:hover{ background: var(--court-dark); }
+.search-chip.is-on .chip-n{ opacity: .85; }
+
+/* --- Contatore esiti --- */
+.search-count{
+  margin: .85rem 0 0;
+  font-size: .88rem;
+  color: var(--ink-soft);
+  min-height: 1.2em;
+}
+.search-count b{ color: var(--court-dark); font-size: 1rem; }
+.search-spread{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--ink-soft);
+  background: var(--paper-dim);
+  padding: .12rem .5rem;
+  border-radius: 20px;
+  margin-left: .35rem;
+}
+
+/* --- Guida / nessun esito --- */
+.search-hint p{ margin: 0 0 .55rem; }
+.search-hint p:last-child{ margin-bottom: 0; }
+.search-suggest-row{ font-size: .88rem; color: var(--ink-soft); }
+.search-suggest{
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: .25rem .65rem;
+  border-radius: 20px;
+  border: 1.5px dashed var(--court);
+  background: transparent;
+  color: var(--court);
+}
+.search-suggest:hover{ background: var(--court); color: var(--white); border-style: solid; }
+
+/* --- Card risultato --- */
+.result-card{ padding: 1.15rem 1.25rem; margin-bottom: .9rem; }
+.res-head{ display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; margin-bottom:.6rem; }
+.res-conf{
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--clay-dark);
+  background: #FBE9E2;
+  padding: .2rem .55rem;
+  border-radius: 20px;
+}
+.res-question{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 .85rem;
+}
+
+.res-opts{ display:flex; flex-direction:column; gap:.35rem; margin-bottom:.85rem; }
+.res-opt{
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+  font-size: .92rem;
+  padding: .45rem .6rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: var(--ink-soft);
+}
+.res-opt-letter{
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: var(--paper-dim);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.res-opt-text{ flex: 1 1 auto; }
+.res-opt-flag{ flex: 0 0 auto; font-size: .85rem; line-height: 1.5; }
+
+.res-opt.is-right{
+  background: #F2F6D9;
+  border-color: var(--ball-dark);
+  color: var(--ink);
+  font-weight: 500;
+}
+.res-opt.is-right .res-opt-letter{ background: var(--ball-dark); color: var(--white); }
+
+.res-why{
+  font-size: .9rem;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-left: 3px solid var(--court);
+  border-radius: 0 7px 7px 0;
+  padding: .6rem .8rem;
+}
+.res-why-tag{
+  display: block;
+  font-family: var(--font-display);
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--court);
+  margin-bottom: .15rem;
+}
+
+/* --- Evidenziazione del termine cercato --- */
+.result-card mark{
+  background: var(--ball);
+  color: var(--ink);
+  font-weight: 600;
+  padding: .05em .2em;
+  border-radius: 3px;
+}
+.res-opt.is-right mark{ background: var(--ball-dark); color: var(--white); }
+
+/* --- Paginazione --- */
+.search-more{ display:flex; justify-content:center; margin-bottom: 1.5rem; }
+.search-more button{
+  background: var(--white);
+  color: var(--court-dark);
+  border-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+}
+.search-more button:hover{ background: var(--paper-dim); border-color: var(--paper-dim); }
+.search-more .muted{ font-size:.78rem; }
+
+@media (max-width: 560px){
+  .search-box input{ font-size: 16px; } /* evita lo zoom automatico su iOS */
+  .search-chip{ font-size: .76rem; padding: .34rem .6rem; }
+  .result-card{ padding: 1rem; }
+  .res-question{ font-size: .96rem; }
+  .res-opt{ font-size: .88rem; }
+  .search-spread{ display:block; margin: .35rem 0 0; }
+}
