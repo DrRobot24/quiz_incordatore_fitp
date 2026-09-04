@@ -36,6 +36,7 @@ I moduli dicono *da dove viene* una domanda; la ricerca dice *di cosa parla*. So
 
 - cerca in **testo della domanda, opzioni e motivazione** insieme
 - accenti indifferenti (`perche` trova `perché`), più parole in **AND**, match anche parziale
+- **separatori indifferenti**: `pre-stretch`, `prestretch` e `pre stretch` si trovano a vicenda, e `1.25` trova anche `1,25`. Vale per termini che contengono già un separatore o lunghi almeno 4 caratteri: sotto quella soglia il match resta letterale, altrimenti `ali` pescherebbe «mass**a li**mitata»
 - **combinabile** con il filtro per modulo, con lo spaccato degli esiti modulo per modulo
 - toccare un modulo senza digitare nulla lo **sfoglia** tutto
 - risultati a pagine da 40, con "Mostra altri"

@@ -339,17 +339,33 @@
       .replace(/[\u0300-\u036f]/g, "");
   }
 
-  // Normalizza tenendo una mappa verso gli indici della stringa ORIGINALE.
+  // Toglie tutto ciò che non è lettera o cifra: "pre-stretch" e "pre stretch"
+  // diventano "prestretch", così le tre grafie si trovano a vicenda.
+  function tighten(s){ return s.replace(/[^a-z0-9]/g, ""); }
+
+  // Normalizza tenendo la mappa verso gli indici della stringa ORIGINALE.
   // Serve perché la normalizzazione cambia le lunghezze (è -> e) e senza mappa
   // l'evidenziazione ritaglierebbe il testo nel punto sbagliato.
-  function normWithMap(str){
+  // Con tight=true scarta anche i separatori e segna in "starts" quali
+  // caratteri aprono una parola: è l'ancoraggio che tiene fuori il rumore.
+  function foldWithMap(str, tight){
     const chars = [];
     const map = [];
+    let starts = "";
+    let atWordStart = true;
     for(let i = 0; i < str.length; i++){
       const n = normText(str[i]);
-      for(let j = 0; j < n.length; j++){ chars.push(n[j]); map.push(i); }
+      for(let j = 0; j < n.length; j++){
+        const c = n[j];
+        const isWordChar = (c >= "a" && c <= "z") || (c >= "0" && c <= "9");
+        if(tight && !isWordChar){ atWordStart = true; continue; }
+        chars.push(c);
+        map.push(i);
+        starts += atWordStart ? "1" : "0";
+        atWordStart = tight ? false : !isWordChar;
+      }
     }
-    return { text: chars.join(""), map: map };
+    return { text: chars.join(""), map: map, starts: starts };
   }
 
   function questionBlob(q){
@@ -358,11 +374,50 @@
   }
 
   function buildSearchIndex(){
-    ALL_QUESTIONS.forEach(q => { q.searchBlob = normText(questionBlob(q)); });
+    ALL_QUESTIONS.forEach(q => {
+      const blob = normText(questionBlob(q));
+      const tight = foldWithMap(blob, true);
+      q.searchBlob = blob;
+      q.searchTight = tight.text;        // stesso testo senza separatori
+      q.searchStarts = tight.starts;     // "1" dove comincia una parola
+    });
   }
 
   function searchTerms(query){
     return normText(query).split(/\s+/).filter(t => t.length > 0);
+  }
+
+  // Un termine può cercare anche a separatori ignorati se contiene già un
+  // separatore ("pre-stretch", "1.25") oppure è abbastanza lungo da non
+  // incastrarsi per caso a cavallo di due parole. Senza questo limite
+  // "ali" pescherebbe "mass[a li]mitata" e "nodo" pescherebbe "rovina[no do]ve".
+  const TIGHT_MIN = 4;
+  function termAllowsTight(term){
+    const g = tighten(term);
+    if(!g) return false;                      // termine di soli simboli
+    return g.length !== term.length || g.length >= TIGHT_MIN;
+  }
+
+  // Il match a separatori ignorati vale solo se comincia a inizio parola:
+  // "prestretch" deve agganciare "[pre-stretch]", non finire in mezzo a un'altra parola.
+  function tightIndexOf(text, starts, needle, from){
+    let at = from;
+    for(;;){
+      at = text.indexOf(needle, at);
+      if(at === -1) return -1;
+      if(starts[at] === "1") return at;
+      at++;
+    }
+  }
+
+  function questionMatches(q, terms, tights){
+    for(let i = 0; i < terms.length; i++){
+      if(q.searchBlob.indexOf(terms[i]) !== -1) continue;
+      const g = tights[i];
+      if(g && tightIndexOf(q.searchTight, q.searchStarts, g, 0) !== -1) continue;
+      return false;
+    }
+    return true;
   }
 
   // Evidenzia i termini SENZA mai passare input grezzo a innerHTML: ritaglia
@@ -371,9 +426,12 @@
     const raw = String(text == null ? "" : text);
     if(!terms.length || !raw) return esc(raw);
 
-    const norm = normWithMap(raw);
+    const norm = foldWithMap(raw, false);
+    let tight = null;                   // costruito solo se il match diretto fallisce
     const ranges = [];
+
     terms.forEach(t => {
+      const before = ranges.length;
       let from = 0;
       for(;;){
         const at = norm.text.indexOf(t, from);
@@ -381,7 +439,22 @@
         ranges.push([norm.map[at], norm.map[at + t.length - 1] + 1]);
         from = at + t.length;
       }
+      if(ranges.length > before) return;          // trovato così com'è
+
+      // Ripiego a separatori ignorati, con le stesse regole del match:
+      // altrimenti una card comparirebbe fra i risultati senza nulla evidenziato.
+      if(!termAllowsTight(t)) return;
+      const g = tighten(t);
+      if(!tight) tight = foldWithMap(raw, true);
+      let f = 0;
+      for(;;){
+        const at = tightIndexOf(tight.text, tight.starts, g, f);
+        if(at === -1) break;
+        ranges.push([tight.map[at], tight.map[at + g.length - 1] + 1]);
+        f = at + g.length;
+      }
     });
+
     if(!ranges.length) return esc(raw);
 
     // Termini diversi possono coprire testo sovrapposto: fondo gli intervalli.
@@ -474,10 +547,13 @@
   // tasto mentre il rendering delle card resta dietro al debounce.
   function currentHits(){
     const terms = searchTerms(searchState.query);
+    // Le versioni senza separatori si calcolano una volta per ricerca,
+    // non una per domanda.
+    const tights = terms.map(t => termAllowsTight(t) ? tighten(t) : "");
     const scoped = searchState.topic !== "all";
     let hits = ALL_QUESTIONS;
     if(scoped) hits = hits.filter(q => q.topic === searchState.topic);
-    if(terms.length) hits = hits.filter(q => terms.every(t => q.searchBlob.indexOf(t) !== -1));
+    if(terms.length) hits = hits.filter(q => questionMatches(q, terms, tights));
     // Query vuota senza capitolo scelto: stato di riposo, si mostra la guida.
     return { hits: hits, terms: terms, scoped: scoped, idle: (terms.length === 0 && !scoped) };
   }
